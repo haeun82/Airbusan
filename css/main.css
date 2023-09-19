@@ -88,7 +88,7 @@ header .inner .main-menu > li {
 }
 
 header .inner .main-menu > li:hover .item_content {
-  display: flex;
+  display: block;
 }
 
 
@@ -126,7 +126,7 @@ header .inner .main-menu .item_content {
   position: fixed;
   left: 0;
   top: 130px;
-  /* display: none; */
+  display: none;
   background-color: #fbfbfb;
 }
 
