@@ -3,9 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <!-- 오픈 그래프 -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Airbusan" />
+  <meta property="og:title" content="Airbusan" />
+  <meta property="og:description" content="AIR BUSAN은 완벽한 안전,편리한 서비스,실용적인 가격으로 최고의 고객 가치를 창조시키기 위해 최선의 노력을 다하겠습니다." />
+  <meta property="og:image" content="./images/Airbusan_open.png" />
+  <meta property="og:url" content="https://www.airbusan.com" />
+
+  <!-- 트위터 카드 -->
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="Airbusan" />
+  <meta property="twitter:title" content="Airbusan" />
+  <meta property="twitter:description" content="AIR BUSAN은 완벽한 안전,편리한 서비스,실용적인 가격으로 최고의 고객 가치를 창조시키기 위해 최선의 노력을 다하겠습니다." />
+  <meta property="twitter:image" content="./images/Airbusan_open.png" />
+  <meta property="twitter:url" content="https://www.airbusan.com" />
+
+  <title>Airbusan</title>
+
+  <!-- reset.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- google icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+  <!-- main.css -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- main.js -->
+  <script defer src="./js/main.js"></script>
 </head>
 <body>
-  
+  <header>
+    <div class="inner">
+      <a href="/" class="logo">
+        <img src="./images/img_logo.png" alt="AIRBUSAN_logo">
+      </a>
+      <div class="sub-menu">
+        <span class="material-icons">search</span>
+        <span class="material-icons">person</span>
+        <select id="group">
+          <option value="personal">개인</option>
+          <option value="company">기업</option>
+          <option value="tourlist">여행사</option>
+        </select>
+        <select id="lang_group">
+          <option value="korea">한국어</option>
+          <option value="english">English</option>
+          <option value="personal">여행사</option>
+          <option value="personal">여행사</option>
+        </select>
+        <ul class="main-menu">
+          <li>
+            <a href="javascript:void(0)">항공권 예약</a>
+          </li>
+          <div class="item_content">
+            <ul>
+              <li><a href="javascript:void(0)" class="bold_title">항공권 예매</a></li>
+              <li><a href="javascript:void(0)">국내 단체 예매</a></li>
+              <li><a href="javascript:void(0)">선물 항공권</a></li>
+              <li><a href="javascript:void(0)">부산-김포 정기권</a></li>
+            </ul>
+            <ul>
+              <li><a href="javascript:void(0)" class="bold_title">이용 안내</a></li>
+              <li><a href="javascript:void(0)">항공권예매안내</a></li>
+              <li><a href="javascript:void(0)">전자항공권(여정안내서)</a></li>
+              <li><a href="javascript:void(0)">항공권 환불</a></li>
+              <li><a href="javascript:void(0)">항공권 재발행</a></li>
+            </ul>
+            <ul>
+              <li><a href="javascript:void(0)" class="bold_title">항공운임 안내</a></li>
+              <li><a href="javascript:void(0)">국내선</a></li>
+              <li><a href="javascript:void(0)">국제선</a></li>
+            </ul>
+            <ul>
+              <li><a href="javascript:void(0)" class="bold_title">운항 정보</a></li>
+              <li><a href="javascript:void(0)">스케줄 조회</a></li>
+              <li><a href="javascript:void(0)">취항노선</a></li>
+              <li><a href="javascript:void(0)">실시간 출도착</a></li>
+              <li><a href="javascript:void(0)">항공기 소개</a></li>
+            </ul>
+          </div>
+          <li>
+            <a href="javascript:void(0)">서비스 안내</a>
+            <div class="item_content">
+              <ul>
+                <li><a href="javascript:void(0)" class="bold_title">스탬프</a></li>
+                <li><a href="javascript:void(0)">FLY&STAMP 안내</a></li>
+                <li><a href="javascript:void(0)">STAMP 구매/환불</a></li>
+                <li><a href="javascript:void(0)">STAMP 양도</a></li>
+                <li><a href="javascript:void(0)">누락 STAMP 적립</a></li>
+              </ul>
+              <ul>
+                <li><a href="javascript:void(0)" class="bold_title">도움이 필요하신 손님</a></li>
+                <li><a href="javascript:void(0)">임산부/유아동반</a></li>
+                <li><a href="javascript:void(0)">반려동물 동반</a></li>
+                <li><a href="javascript:void(0)">휠체어 서비스</a></li>
+                <li><a href="javascript:void(0)">투게더 서비스</a></li>
+                <li><a href="javascript:void(0)">혼자 여행하는 어린이</a></li>
+                <li><a href="javascript:void(0)">의사소견서 필요</a></li>
+              </ul>
+              <ul>
+                <li><a href="javascript:void(0)" class="bold_title">공항 서비스</a></li>
+                <li><a href="javascript:void(0)">탑승수속</a></li>
+                <li><a href="javascript:void(0)">연결탑승수속</a></li>
+                <li><a href="javascript:void(0)">탑승권 자동발급</a></li>
+                <li><a href="javascript:void(0)">홈페이지/모바일 탑승권</a></li>
+                <li><a href="javascript:void(0)">취향지 공항/카운터정보</a></li>
+                <li><a href="javascript:void(0)">출입국 신고서</a></li>
+                <li><a href="javascript:void(0)">라운지 안내</a></li>
+              </ul>
+              <ul>
+                <li><a href="javascript:void(0)" class="bold_title">수하물</a></li>
+                <li><a href="javascript:void(0)">무료 수하물</a></li>
+                <li><a href="javascript:void(0)">초과 수하물</a></li>
+                <li><a href="javascript:void(0)">특수 수하물</a></li>
+                <li><a href="javascript:void(0)">포장용품 안내</a></li>
+                <li><a href="javascript:void(0)">운송제한 물품</a></li>
+                <li><a href="javascript:void(0)">수하물 배상</a></li>
+                <li><a href="javascript:void(0)">유실물 안내</a></li>
+              </ul>
+              <ul>
+                <li><a href="javascript:void(0)" class="bold_title">기내 서비스</a></li>
+                <li><a href="javascript:void(0)">기내 면세품</a></li>
+                <li><a href="javascript:void(0)">하늘 책방(e-book)</a></li>
+                <li><a href="javascript:void(0)">AIRBUSAN MALL</a></li>
+              </ul>
+              <ul>
+                <li><a href="javascript:void(0)" class="bold_title">부가서비스 구매</a></li>
+                <li><a href="javascript:void(0)">번들</a></li>
+                <li><a href="javascript:void(0)">수하물</a></li>
+                <li><a href="javascript:void(0)">좌석</a></li>
+                <li><a href="javascript:void(0)">라운지</a></li>
+                <li><a href="javascript:void(0)">기내식</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:void(0)">이벤트</a>
+            <div class="item_content">
+              <ul>
+                <li><a href="javascript:void(0)" class="bold_title">진행중인 이벤트</a></li>
+                <li><a href="javascript:void(0)" class="bold_title">당첨자 발표</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:void(0)">로고샵/제휴상품</a>
+            <div class="item_content">
+              <ul>
+                <li><a href="javascript:void(0)" class="bold_title">SHOP AIR BUSAN</a></li>
+              </ul>
+              <ul>
+                <li><a href="javascript:void(0)" class="bold_title">FLY&FUN</a></li>
+                <li><a href="javascript:void(0)">국내</a></li>
+                <li><a href="javascript:void(0)">해외</a></li>
+              </ul>
+              <ul>
+                <li><a href="javascript:void(0)" class="bold_title">여행상품</a></li>
+                <li><a href="javascript:void(0)">호텔</a></li>
+                <li><a href="javascript:void(0)">렌터카</a></li>
+                <li><a href="javascript:void(0)">여행자 보험</a></li>
+                <li><a href="javascript:void(0)">포켓와이파이/유심/e-sim</a></li>
+              </ul>
+              <ul>
+                <li><a href="javascript:void(0)" class="bold_title">제휴카드</a></li>
+                <li><a href="javascript:void(0)">우리카드</a></li>
+                <li><a href="javascript:void(0)">신한카드</a></li>
+              </ul>
+            </div>
+            
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
 </body>
 </html>
