@@ -37,7 +37,6 @@ header {
 }
 
 header > .inner {
-  /* background-color: lightblue; */
   height: 130px;
   display: flex;
 }
@@ -87,8 +86,18 @@ header .inner .main-menu > li {
   cursor: pointer;
 }
 
+header .inner .main-menu .item_content {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 130px;
+  display: none;
+  background-color: #fbfbfb;
+}
+
 header .inner .main-menu > li:hover .item_content {
-  display: block;
+  /* display: block; */
+  height: 100%;
 }
 
 
@@ -105,29 +114,6 @@ header .inner .main-menu > li::after {
 header .inner .main-menu > li:hover::after {
   transform: scaleX(1);
   display: flex;
-}
-
-/* header .inner .main-menu .item_content {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  position: fixed;
-  left: 0;
-  top: 130px;
-} */
-
-
-
-
-/* 연습 */
-
-header .inner .main-menu .item_content {
-  width: 100%;
-  position: fixed;
-  left: 0;
-  top: 130px;
-  display: none;
-  background-color: #fbfbfb;
 }
 
 header .inner .main-menu .item_content .inner {
@@ -152,6 +138,63 @@ header .inner .main-menu .item_content .inner ul li:hover a:not(.bold_title) {
 header .inner .main-menu .item_content .inner ul li .bold_title {
   font-weight: bold;
   color: #333;
+}
+
+
+/* VISUAL */
+.visual {
+  height: 690px;
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.visual .swiper-button-prev,
+.visual .swiper-button-next {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 320px;
+  z-index: 1;
+  color: #333;
+  cursor: pointer;
+  transition: 0.4s;
+
+}
+
+.visual .swiper-button-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  margin-left: -600px;
+}
+
+.visual .swiper-button-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 50%;
+  margin-right: -600px;
+}
+
+
+.visual .swiper-button-prev:hover,
+.visual .swiper-button-next:hover {
+  border: 2px solid #2A3493;
+  background-color: #2A3493;
+  color: #fff;
+
+
+}
+
+.visual .material-icons {
+  font-size: 30px;
 }
 
 
