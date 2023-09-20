@@ -81,11 +81,15 @@ header .inner .main-menu {
   justify-content: flex-end;
   align-items: end;
 }
+header .inner .main-menu > ul {
+  display: flex;
+}
 
-header .inner .main-menu > li {
-  padding-left: 60px;
-  padding-right: 60px;
+header .inner .main-menu > ul > li {
   cursor: pointer;
+}
+header .inner .main-menu > ul > li {
+  margin: 0 40px;
 }
 
 header .inner .main-menu .item_content {
@@ -97,24 +101,27 @@ header .inner .main-menu .item_content {
   background-color: #fbfbfb;
 }
 
-header .inner .main-menu > li:hover .item_content {
+header .inner .main-menu > ul > li:hover .item_content {
   display: block;
 }
 
+header .inner .main-menu > ul > li > a {
+  padding: 0 30px;
+}
 
-header .inner .main-menu > li::after {
+
+header .inner .main-menu > ul > li::after {
   display: block;
   content: '';
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   border-bottom: 5px solid #2A3493;
   transform: scaleX(0);  
   transition: transform 250ms ease-in-out;
 }
 
 
-header .inner .main-menu > li:hover::after {
+header .inner .main-menu > ul > li:hover::after {
   transform: scaleX(1);
-  display: flex;
 }
 
 header .inner .main-menu .item_content .inner {
@@ -156,11 +163,17 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   overflow: hidden;
 }
 
+.visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .visual .swiper-button-prev,
 .visual .swiper-button-next {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border: 2px solid #333;
   border-radius: 50%;
   position: absolute;
@@ -194,8 +207,11 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   border: 2px solid #2A3493;
   background-color: #2A3493;
   color: #fff;
+}
 
-
+.visual .swiper-button-next::after,
+.visual .swiper-button-prev::after {
+  font-size: 25px;
 }
 
 .visual .material-icons {
@@ -205,9 +221,9 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
 
 /* SEARCH_BOX */
 .search_box {
-  margin-top: 100px;
-  position: relative;
+  padding-top: 100px;
 }
+
 
 .search_box button {
   cursor: pointer;
@@ -220,7 +236,7 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
 .search_box .search_tab li {
   width: 200px;
   height: 60px;
-  background-color: #fbfbfb;
+  background-color: #f1f1f1;
   border-radius: 30px 30px 0 0;
   text-align: center;
   line-height: 60px;
@@ -234,21 +250,27 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   font-weight: 700;
 }
 
+/* search_tab_content */
+
 .search_box .search_tab_content {
+  display: flex;
   height: 290px;
-  background-color: #fbfbfb;
+  background-color: #f1f1f1;
   border-radius: 0 0 30px 30px;
   box-shadow: 5px 5px 5px #c7c7c7;
+  padding: 30px 40px
 }
 
-.search_box .search_tab_content .select_button {
-  position: absolute;
-  bottom: 230px;
-  left: 73px;
-  
+.search_box .search_tab_content .select_box {
+  width: 35%;
 }
 
-.search_box .search_tab_content .select_button button {
+.search_box .search_tab_content .select_btn {
+  width: 100%;
+}
+
+
+.search_box .search_tab_content .select_btn button {
   font-size: 16px;
   padding: 10px 20px;
   border: none;
@@ -265,11 +287,7 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 40px;
-  margin: auto;
+  margin-top: 50px;
 }
 
 .select_area button {
@@ -281,6 +299,7 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
 .select_area .select_to span:first-child {
   text-align: center;
   font-weight: 700;
+  font-size: 20px;
   color: #b1b1b1;
   
 }
@@ -316,41 +335,56 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   color: #676767;
 }
 
-/* BOOKING_TYPE */
-.search_box .booking_type {
+/* select_date */
+.search_box .select_date {
+  width: 65%;
   display: flex;
-  position: absolute;
-  left: 40%;
-  top: 25%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.search_box .booking_type li {
+/* BOOKING_TYPE */
+
+.search_box .search_tab_content .select_date .booking_type {
+  display: flex;
+  margin-top: 10px;
+}
+
+.search_box .search_tab_content .select_date .booking_type span {
+  display: block;
   margin-right: 30px;
-  
+  cursor: pointer;
 }
+.search_box .booking_type span {
+  border-bottom: 2px solid transparent;
 
-.search_box .booking_type li:active a {
+}
+.search_box .booking_type span:active {
   font-weight: 700;
   border-bottom: 2px solid #333;
 }
 
 .search_box .booking_group {
   display: flex;
-  position: absolute;
-  left: 40%;
-  bottom: 43%;
 }
 
 .search_box .booking_group div {
-  margin-right: 10px;
+  margin: 90px 0 60px;
   border-bottom: 4px solid #d9d9d9;
   cursor: pointer;
 }
 
+.search_box .booking_group div + div {
+  margin-left: 50px;
+}
+
+.search_box .booking_group span:first-child {
+  padding-right: 100px;
+}
+
 .search_box .btn_search {
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
+  width: 200px;
+  height: 50px;
   padding: 10px 30px;
   border: none;
   font-size: 20px;
@@ -358,24 +392,52 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   color: #fff;
   background-color: #2A3493;
   border-radius: 10px;
+  align-self: flex-end;
 }
 
 /* SALE_BOX */
 
 .sale_box {
-  margin-top: 100px;
+  padding-top: 100px;
 }
-
-.sale_box p:first-child {
+.sale_box .inner .title {
+  margin-bottom: 40px;
+  /* display: flex;
+  flex-direction: column; */
+}
+.sale_box .inner .title p:nth-child(1) {
   font-size: 20px;
 }
 
-.sale_box p:nth-child(2) {
+.sale_box .inner .title p:nth-child(2) {
   font-size: 23px;
   font-weight: 500;
 }
 
-.sale_box h2:last-child {
+.sale_box .inner .title .btn_sale_more {
+  align-self: flex-end;
+  width: 150px;
+  height: 50px;
+  background-color: #0095DA;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.sale_box .inner .title .btn_sale_more:hover {
+  background-color: #0078af;
+}
+
+.sale_box .inner .title .title_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.sale_box .inner .title .title_wrap h2 {
   font-size: 32px;
   font-weight: 700;
 }
@@ -391,6 +453,25 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   background-color: #fafafa;
   border-radius: 46px;
   border: 1px solid #e0e0e0;
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+
+.sale_box .sale_box_content .item__content img {
+  border-radius: 46px;
+  display: block;
+  margin: 0 auto;
+}
+
+.sale_box .sale_box_content .item__content p:nth-child(2) {
+  font-size: 25px;
+  font-weight: 700;
+  text-align: end;
+}
+
+.sale_box .sale_box_content .item__content > div {
+  display: flex;
+  justify-content: flex-end;
 }
 
 
