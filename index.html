@@ -220,12 +220,8 @@
       </div>
     </div>
     
-    <div class="swiper-button-prev">
-      <!-- <span class="material-icons">arrow_back</span> -->
-    </div>
-    <div class="swiper-button-next">
-      <!-- <span class="material-icons">arrow_forward</span> -->
-    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </section>
   <!-- SEARCH_BOX -->
   <section class="search_box">
@@ -237,17 +233,23 @@
         <li><a href="javascript:void(0)">단체 예매</a></li>
       </ul>
       <div class="search_tab_content">
-        <label for="select_button">
+        <!-- <label for="select_button" class="select_button">
           <button type="button">일반 예매</button>
           <button type="button">스탬프 예매</button>
-        </label>
+        </label> -->
+        <ul class="select_button">
+          <li>
+            <button type="button">일반 예매</button>
+            <button type="button">스탬프 예매</button>
+          </li>
+        </ul>
         <div class="select_area">
           <button type="button" class="select_form">
             <span>From</span>
             <h2>출발지</h2>
           </button>
           <div class="change">
-            <span class="material-icons">sync alt</span>
+            <span class="material-icons">cached</span>
           </div>
           <button type="button" class="select_to">
             <span>To</span>
