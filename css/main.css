@@ -34,6 +34,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 2;
+  background-color: #fff;
 }
 
 header > .inner {
@@ -62,6 +63,7 @@ header .inner .sub-menu span:hover {
   font-weight: 700;
   color: #0095DA;
 }
+
 
 header .inner .sub-menu #group {
   margin-right: 10px;
@@ -96,8 +98,7 @@ header .inner .main-menu .item_content {
 }
 
 header .inner .main-menu > li:hover .item_content {
-  /* display: block; */
-  height: 100%;
+  display: block;
 }
 
 
@@ -119,14 +120,17 @@ header .inner .main-menu > li:hover::after {
 header .inner .main-menu .item_content .inner {
   display: flex;
   justify-content: space-between;
+  text-align: center;
 }
 
 header .inner .main-menu .item_content .inner ul {
   padding: 30px 20px;
+  box-sizing: border-box;
 }
 
 header .inner .main-menu .item_content .inner ul li {
   padding-bottom: 10px;
+
 }
 
 header .inner .main-menu .item_content .inner ul li:hover a:not(.bold_title) {
@@ -137,6 +141,7 @@ header .inner .main-menu .item_content .inner ul li:hover a:not(.bold_title) {
 
 header .inner .main-menu .item_content .inner ul li .bold_title {
   font-weight: bold;
+  font-size: 17px;
   color: #333;
 }
 
@@ -154,8 +159,6 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
 
 .visual .swiper-button-prev,
 .visual .swiper-button-next {
-  display: inline-block;
-  font-size: 30px;
   width: 60px;
   height: 60px;
   border: 2px solid #333;
@@ -200,6 +203,88 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
 }
 
 
+/* SEARCH_BOX */
+.search_box {
+  margin-top: 100px;
+}
+
+.search_box button {
+  cursor: pointer;
+}
+
+.search_box .search_tab {
+  display: flex;
+}
+
+.search_box .search_tab li {
+  width: 200px;
+  height: 60px;
+  background-color: #fbfbfb;
+  border-radius: 30px 30px 0 0;
+  text-align: center;
+  line-height: 60px;
+}
+
+.search_box .search_tab li a {
+  display: block;
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.search_box .search_tab_content {
+  height: 290px;
+  background-color: #fbfbfb;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 5px 5px 5px #c7c7c7;
+}
+
+/* SELECT_AREA */
+
+
+.select_area {
+  /* width: 300px; */
+  height: 145px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.select_area button {
+  padding: 20px 0;
+  outline: none;
+  border: none;
+  /* background-color: transparent; */
+}
+.select_area .select_form span:first-child,
+.select_area .select_to span:first-child {
+  /* width: 100%; */
+  text-align: center;
+  font-weight: 700;
+  color: #b1b1b1;
+  
+}
+.select_area .change {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fbfbfb;
+
+}
+.select_area .change .material-icons {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 145px;
+}
+
+.select_area .select_form h2:last-child,
+.select_area .select_to h2:last-child {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+  color: #676767;
+}
 
 
 
