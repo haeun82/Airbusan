@@ -294,12 +294,18 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   background-color: #f5f5f5;
   margin: 0 30px;
   padding: 0;
+  cursor: pointer;
+}
+
+.select_area .change:active .material-icons {
+  color: #676767;
 }
 
 .select_area .change .material-icons {
   font-size: 50px;
   font-weight: 700;
   color: #c7c7c7;
+  
 }
 
 .select_area .select_form h2:last-child,
@@ -308,6 +314,83 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   text-align: center;
   font-weight: 700;
   color: #676767;
+}
+
+/* BOOKING_TYPE */
+.search_box .booking_type {
+  display: flex;
+  position: absolute;
+  left: 40%;
+  top: 25%;
+}
+
+.search_box .booking_type li {
+  margin-right: 30px;
+  
+}
+
+.search_box .booking_type li:active a {
+  font-weight: 700;
+  border-bottom: 2px solid #333;
+}
+
+.search_box .booking_group {
+  display: flex;
+  position: absolute;
+  left: 40%;
+  bottom: 43%;
+}
+
+.search_box .booking_group div {
+  margin-right: 10px;
+  border-bottom: 4px solid #d9d9d9;
+  cursor: pointer;
+}
+
+.search_box .btn_search {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  padding: 10px 30px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #2A3493;
+  border-radius: 10px;
+}
+
+/* SALE_BOX */
+
+.sale_box {
+  margin-top: 100px;
+}
+
+.sale_box p:first-child {
+  font-size: 20px;
+}
+
+.sale_box p:nth-child(2) {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.sale_box h2:last-child {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.sale_box .sale_box_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sale_box .sale_box_content .item__content {
+  width: 360px;
+  height: 420px;
+  background-color: #fafafa;
+  border-radius: 46px;
+  border: 1px solid #e0e0e0;
 }
 
 
