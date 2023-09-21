@@ -50,7 +50,81 @@ let clickText = true;
 // clickText가 true
 
 // text2를 클릭해서
-// clickText이면
+// clickText이면 img2가 보이게하고 img1를 숨김
+// 그렇지 않고 text1을 클릭하면 img1보이고 img2 숨김
+
+// text2.addEventListener('click', function () {
+//   if (clickText) { 
+//     // img2.style.opacity = 1;
+//     img1.style.opacity = 0;
+//     clickText = false;
+//   }
+//   else if(clickText) {
+//     img1.style.opacity = 1;
+//     img2.style.opacity = 0;
+//     clickText = true;
+//   }
+// });
+
+
+// text2.addEventListener('click', function () {
+//   const hasHide = img2.classList.contains('hide');
+//   if (hasHide) {
+//     img2.classList.remove('hide');
+//     img2.style.display = 'block';
+//   } else {
+//     img1.classList.add('hide');
+//     img1.style.display = 'block';
+//   }
+// });
+
+
+
+text2.addEventListener('click', function () {
+  // img2.style.display = 'block';
+  img1.style.opacity = 0;
+  img2.style.opacity = 1;
+});
+
+text1.addEventListener('click', function () {
+  // img1.style.display = 'block';
+  img1.style.opacity = 1;
+  img2.style.opacity = 0;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+// text1.addEventListener('click', function () {
+//   if (clickText) {
+//     img1.style.display = 'block';
+//     // img2.style.display = 'none';
+//     clickText = false;
+//   }
+// });
+
+// text2.addEventListener('click', function () {
+
+//   img2.style.display = 'block';
+//   img2.style.display = 'none';
+//   // clickText = false;
+// });
+
+// text1.addEventListener('click', function () {
+//   img1.style.display = 'block';
+//   img2.style.display = 'none';
+//   // clickText = false;
+// });
+
 
 
 
