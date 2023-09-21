@@ -13,12 +13,29 @@ new Swiper('.visual .swiper', {
 
 
 // SELECT_AREA CHANGE
-const formEl = document.querySelector('.select_form');
-const toEl = document.querySelector('.select_to');
-const selectAreaEls = document.querySelector('.select_area');
 const changeEl = document.querySelector('.change');
+const selecrAreaEl = document.querySelector('.select_area');
+let status = true;
 
-console.log(selectAreaEls);
+
+
+
+
+
+changeEl.addEventListener('click', function () {
+  if (status) {
+    selecrAreaEl.style.flexDirection = 'row-reverse';
+    selecrAreaEl.style.justifyContent = 'flex-end';
+    status = false;
+  } else {
+    selecrAreaEl.style.flexDirection = 'row';
+    selecrAreaEl.style.justifyContent = 'flex-start';
+    status = true;
+  }
+
+});
+
+
 
 
 
@@ -28,8 +45,6 @@ new Swiper('.sale_box .swiper', {
   autoplay: { 
     delay: 4000 
   },
-  slidesPerView: 3,
-  reverseDirection: true,
-  disableOnInteraction: true
+  slidesPerView: 3
 });
 

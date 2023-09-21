@@ -412,8 +412,6 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
 
 .sale_box .inner .title {
   margin-bottom: 40px;
-  /* display: flex;
-  flex-direction: column; */
 }
 .sale_box .inner .title p:nth-child(1) {
   font-size: 20px;
@@ -428,17 +426,24 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   align-self: flex-end;
   width: 150px;
   height: 50px;
-  background-color: #0095DA;
-  color: #fff;
-  border: none;
+  background-color: #fff;
+  color: #0095DA;
+  border: 2px solid #0095DA;
   font-size: 16px;
   font-weight: 700;
   border-radius: 30px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .sale_box .inner .title .btn_sale_more:hover {
+  background-color: #0095DA;
+  color: #fff;
+}
+
+.sale_box .inner .title .btn_sale_more:active {
   background-color: #0078af;
+  border: 2px solid #0078af;
 }
 
 .sale_box .inner .title .title_wrap {
@@ -484,7 +489,6 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
 
 .sale_box .swiper .item__content .thumb_box:hover img {
   transform: scale(1.1);
-  /* transition: transform 0.3s; */
 }
 
 .sale_box .swiper .item__content p:nth-child(2) {
@@ -514,6 +518,182 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   font-weight: 700;
   color: #676767;
 }
+
+
+/* AIRBUSAN_GOODS */
+.goods {
+  padding-top: 100px
+}
+
+.goods .inner .title p:nth-child(2) {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.goods .inner .title .title_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.goods .inner .title .title_wrap h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.goods .inner .title .btn_sale_more {
+  align-self: flex-end;
+  width: 150px;
+  height: 50px;
+  background-color: #fff;
+  color: #8BC53F;
+  border: 2px solid #8BC53F;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 
+    background-color 0.3s;
+
+}
+
+.goods .inner .title .btn_sale_more:hover {
+  background-color: #8BC53F;
+  /* border: 2px solid #8BC53F; */
+  color: #fff;
+}
+
+.goods .inner .title .btn_sale_more:active {
+  background-color: #66ad09;
+  border: 2px solid #66ad09;
+}
+
+/* goods_box */
+.goods .inner .goods_box ul {
+  display: flex;
+  margin-top: 40px;
+}
+
+.goods .inner .goods_box ul li {
+  position: relative;
+}
+
+.goods .inner .goods_box ul li .click_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -127%);
+  font-size: 25px;
+  font-weight: 700;
+  color: #f1f1f1;
+  display: none;
+}
+
+.goods .inner .goods_box ul li + li {
+  margin-left: 13px;
+}
+
+.goods .inner .goods_box ul li a {
+  display: block;
+  width: 290px;
+  height: 290px;
+  border-radius: 10px;
+  overflow: hidden;
+  /* transition: filter 0.4s; */
+}
+
+.goods .inner .goods_box > ul > li > a:hover img {
+  filter: brightness(0.8);
+  transform: scale(1.1);
+  transition: filter 0.4s;
+}
+
+
+.goods .inner .goods_box ul li p:nth-child(2) {
+  font-weight: 700;
+  margin: 10px 0 5px;
+  cursor: pointer;
+}
+
+.goods .inner .goods_box ul li p:nth-child(2):active {
+  color: #0095DA;
+}
+.goods .inner .goods_box ul li span:last-child {
+  cursor: pointer;
+}
+
+
+/* TRAVEL_SERVICE */
+.travel_service {
+  margin-top: 100px;
+}
+
+.travel_service .inner .title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* TRAVEL_SERVICE */
+.travel_service .inner .service_icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.travel_service .inner .service_icons li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: display 1s;
+}
+
+.travel_service .inner .service_icons li img.service_icon_h {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.travel_service .inner .service_icons li:hover span {
+  font-weight: 700;
+  color: #2A3493;
+}
+
+.travel_service .inner .service_icons li:hover img.service_icon_h {
+  display: block;
+}
+
+.travel_service .inner .service_icons li > span {
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
