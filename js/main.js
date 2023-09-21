@@ -17,11 +17,6 @@ const changeEl = document.querySelector('.change');
 const selecrAreaEl = document.querySelector('.select_area');
 let status = true;
 
-
-
-
-
-
 changeEl.addEventListener('click', function () {
   if (status) {
     selecrAreaEl.style.flexDirection = 'row-reverse';
@@ -32,11 +27,7 @@ changeEl.addEventListener('click', function () {
     selecrAreaEl.style.justifyContent = 'flex-start';
     status = true;
   }
-
 });
-
-
-
 
 
 // SALE_BOX SLIDES
@@ -47,4 +38,19 @@ new Swiper('.sale_box .swiper', {
   },
   slidesPerView: 3
 });
+
+// BENEFIT_BOX CHANGE
+const text1 = document.querySelector('.text1');
+const text2 = document.querySelector('.text2');
+const img1 = document.querySelector('.img1');
+const img2 = document.querySelector('.img2');
+
+let clickText = true;
+
+// clickText가 true
+
+// text2를 클릭해서
+// clickText이면
+
+
 

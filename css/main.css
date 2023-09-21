@@ -647,13 +647,14 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   align-items: center;
   cursor: pointer;
   position: relative;
-  transition: display 1s;
 }
 
 .travel_service .inner .service_icons li img.service_icon_h {
   position: absolute;
   top: 0;
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  transition: opacity 0.3s linear;
 }
 
 .travel_service .inner .service_icons li:hover span {
@@ -662,12 +663,190 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
 }
 
 .travel_service .inner .service_icons li:hover img.service_icon_h {
-  display: block;
+  /* display: block; */
+  opacity: 1;
 }
 
 .travel_service .inner .service_icons li > span {
   margin-top: 10px;
 }
+
+/* NOTICE */
+.notice {
+  margin-top: 100px;
+}
+
+.notice .inner {
+  width: 100%;
+  display: flex;
+}
+
+.notice .inner .notice_box {
+  width: 65%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f3f3f3;
+}
+
+.notice .inner .notice_box .notice_title {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.notice .inner .notice_box .notice_title h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.notice .inner .notice_box .notice_title p {
+  margin: 30px 0 50px;
+}
+
+.notice .inner .notice_box .notice_title a {
+  font-weight: 700;
+}
+
+.notice .inner .notice_box .notice_title a::after {
+  display:block;
+  width: 65px;
+  content: '';
+  border-bottom: solid 4px #0095DA;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+  transform-origin: 0% 50%;
+}
+
+.notice .inner .notice_box .notice_title a:hover::after {
+  transform: scaleX(1); 
+  transform-origin: 0% 50%;
+}
+
+.notice .inner .notice_box .notice_content {
+  width: 60%;
+
+}
+
+.notice .inner .notice_box .notice_content ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end; 
+}
+
+.notice .inner .notice_box .notice_content > ul > li > a {
+  margin-right: 30px;
+  /* border-bottom: 1px solid transparent; */
+
+}
+
+.notice .inner .notice_box .notice_content > ul > li > a:hover {
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.notice .inner .notice_box .notice_content > ul > li > span:nth-child(1) {
+  border: 1px solid #8BC53F;
+  color: #8BC53F;
+  background-color: #fff;
+  font-size: 12px;
+  margin-right: 5px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 20px;
+}
+
+.notice .inner .notice_box .notice_content > ul > li span:last-child {
+  color: #676767;
+}
+
+
+
+
+/* BENEFIT_BOX */
+.benefit_box {
+  width: 35%;
+  background-color: #2A3493;
+  padding: 10px 7px;
+  position: relative;
+}
+.benefit_box h3 {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.benefit_box img {
+  width: 271px;
+  height: 181px;
+  border-radius: 10px;
+}
+
+.benefit_box a {
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.benefit_box p {
+  font-size: 17px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 70px;
+}
+
+.benefit_box .benefit_01,
+.benefit_box .benefit_02 {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.benefit_box .benefit_01,
+.benefit_box .benefit_02 {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.benefit_box .benefit_01 .benefit_01_title,
+.benefit_box .benefit_02 .benefit_02_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.benefit_box .benefit_01 .benefit_01_title > a::after,
+.benefit_box .benefit_02 .benefit_02_title > a::after {
+  display:block;
+  width: 60px;
+  content: '';
+  border-bottom: solid 4px #d9d9d9;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+  transform-origin: 0% 50%;
+}
+
+.benefit_box .benefit_01 .benefit_01_title > a:hover::after,
+.benefit_box .benefit_02 .benefit_02_title > a:hover::after {
+  transform: scaleX(1); 
+  transform-origin: 0% 50%;
+}
+
+.benefit_box .benefit_01 img:last-child {
+  position: absolute;
+  right: 7px;
+}
+
+.benefit_box .benefit_02 {
+  display: flex; 
+  justify-content: space-between;
+  /* position: absolute;
+  top: 50px; */
+}
+
 
 
 
