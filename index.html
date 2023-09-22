@@ -228,17 +228,26 @@
   <section class="search_box">
     <div class="inner">
       <ul class="search_tab">
-        <li><a href="javascript:void(0)">항공권 예매</a></li>
-        <li><a href="javascript:void(0)">예약 조회</a></li>
-        <li><a href="javascript:void(0)">체크인</a></li>
-        <li><a href="javascript:void(0)">단체 예매</a></li>
+        <li class="reservation_btn_1">
+          <a href="javascript:void(0)" class="reservation_btn_11">항공권 예매</a>
+        </li>
+        <li class="reservation_btn_2">
+          <a href="javascript:void(0)" class="reservation_btn_22">예약 조회</a>
+        </li>
+        <li class="reservation_btn_3">
+          <a href="javascript:void(0)" class="reservation_btn_33">체크인</a>
+        </li>
+        <li class="reservation_btn_4">
+          <a href="javascript:void(0)">단체 예매</a>
+        </li>
       </ul>
       <div class="search_tab_content">
         <div class="select_box">
-          <div class="select_btn">
-            <button type="button">일반 예매</button>
-            <button type="button">스탬프 예매</button>
-          </div>
+          <ul class="select_btn">
+            <li>
+              <button type="button">스탬프 예매</button>
+            </li>
+          </ul>
           <div class="select_area">
             <button type="button" class="select_form">
               <span>From</span>
@@ -252,13 +261,18 @@
               <h2>도착지</h2>
             </button>
           </div>
+          <div class="stamp_check">
+            <label for="stamp">스탬프 조회</label>
+            <input type="text" id="stamp"  placeholder="예매자명" class="hidden">
+            <span class="material-icons">search</span>
+            
+          </div>
         </div>
-        
         <div class="select_date">
           <div class="booking_type">
-            <span>왕복</span>
-            <span>편도</span>
-            <span>다구간</span>
+            <span class="type1">왕복</span>
+            <span class="type1">편도</span>
+            <span class="type1">다구간</span>
           </div>
           
           <div class="booking_group">
@@ -279,7 +293,64 @@
 
         </div>
       </div>
+      <div class="search_tab_reservation">
+        <div class="reservation_btn">
+          <label for="reservation_number">
+            예약번호
+            <input type="text" id="reservation_number" maxlength="12">
+          </label>
+          <label for="first_name">
+            예약자 성
+            <input type="text" id="first_name" maxlength="5">
+          </label>
+          <label for="last_name">
+            예약자 이름
+            <input type="text" id="last_name" maxlength="5">
+          </label>
+          <label for="number">
+            연락처
+            <input type="number" id="number" maxlength="12">
+          </label>
+          <button type="button" class="btn_search">조회</button>
+
+        </div>
+
+      </div>
+      <div class="search_tab_checkIn">
+        <div class="checkIn_btn">
+          <label for="checkIn_number">
+            예약번호
+            <input type="text" id="checkIn_number" maxlength="12">
+          </label>
+          <label for="first_name">
+            예약자 성
+            <input type="text" id="first_name" maxlength="5">
+          </label>
+          <label for="last_name">
+            예약자 이름
+            <input type="text" id="last_name" maxlength="5">
+          </label>
+          <label for="number">
+            출발일
+            <input type="number" id="number" maxlength="12">
+          </label>
+          <button type="button" class="btn_search">조회</button>
+        </div>
+      </div>
+
+      <!-- 출발일 모달창 -->
+      <div class="from_to_date">
+        <div class="ft_date">
+          <label for="From">출발일</label>
+          <input type="date" id="from">
+          <label for="to">도착일</label>
+          <input type="date" id="to">
+
+        </div>
+        <span class="material-icons">close</span>
+      </div>
     </div>
+
   </section>
   <!-- SALE_BOX -->
   <section class="sale_box">
@@ -523,8 +594,54 @@
   <footer>
     <div class="footer-wrap">
       <div class="inner">
-        
+        <div class="footer_left">
+          <ul>
+            <li><a href="javascript:void(0)">회사소개</a></li>
+            <li><a href="javascript:void(0)">투자정보</a></li>
+          </ul>
+          <ul>
+            <li><a href="javascript:void(0)">채용정보</a></li>
+            <li><a href="javascript:void(0)">운송약관</a></li>
+            <li><a href="javascript:void(0)">이용약관</a></li>
+            <li><a href="javascript:void(0)">개인정보 처리방침</a></li>
+            <li><a href="javascript:void(0)">이메일 무단수집 거부</a></li>
+            <li><a href="javascript:void(0)">인터넷 도우미</a></li>
+          </ul>
+          <ul>
+            <li><a href="javascript:void(0)">항공교통이용자 서비스계획</a></li>
+            <li><a href="javascript:void(0)">항공교통이용자 피해구제신청서</a></li>
+            <li><a href="javascript:void(0)">항공 안전 투자 공시</a></li>
+          </ul>
+          <div class="footer_info">
+            <span>에어부산㈜ 대표이사 : 안병석</span>
+            <span>주소 : 부산광역시 강서구 유통단지1로 57번가길 6(대저2동) 우: 46721</span>
+            <span>사업자등록번호 : 605-81-84518</span>
+            <span>통신판매업 신고번호 : 제 2021-부산강서구-0203호</span>
+          </div>
+        </div>
+        <div class="footer_right">
+          <div class="sns_icon">
+            <a href="https://www.instagram.com/airbusan/" target="_blank">
+              <img src="./images/footer_sns_inst.png" alt="Airbusan_sns_instagram">
+            </a>
+            <a href="https://www.youtube.com/c/airbusan_official" target="_blank">
+              <img src="./images/footer_sns_youtube.png" alt="Airbusan_sns_youtube">
+            </a>
+          </div>
+          <div class="customer_center">
+            <p>고객/예약 문의</p>
+            <p>1666-3060</p>
+            <span>09:00~19:00(연중무휴)</span>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="inner">
+      <img src="./images/f_logo01.png" alt="2019년 국가고객만족도(NCSI) 저비용항공 서비스업 부문 1위" class="f_b_icon01">
+      <img src="./images/f_logo02.png" alt="KMAC선정 7년연속(2013~2019) 한국산업회 고객만족도 저비용항공 부문 1위" class="f_b_icon02">
+      <img src="./images/f_logo03.png" alt="2019년 한국표준협회신청 서비스품질 1위(4년연속)" class="f_b_icon03">
+      <img src="./images/f_logo04.png" alt="KMAC선정 2019한국에서 가장 존경받는 기업 LCC 부문 1위(3년 연속)" class="f_b_icon04">
+      <img src="./images/img_fot_logo02.png" alt="Airbusan_하단 로고" class="f_b_icon05">
     </div>
   </footer>
 </body>

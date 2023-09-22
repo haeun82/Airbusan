@@ -11,6 +11,24 @@ new Swiper('.visual .swiper', {
   }
 });
 
+// SELECT_BOX_STAMP_TOGGLE
+const btn = document.querySelector('.select_btn button');
+const stampCheck = document.querySelector('.stamp_check');
+
+let click = '보임';
+
+btn.addEventListener('click', function () {
+  if (click == '보임') {
+    stampCheck.style.opacity = 1;  
+    btn.style.backgroundColor = '#0095DA';
+    click = '숨김';
+
+  } else {
+    stampCheck.style.opacity = 0; 
+    btn.style.backgroundColor = '#717171'
+    click = '보임';      
+  }
+});
 
 // SELECT_AREA CHANGE
 const changeEl = document.querySelector('.change');
@@ -28,6 +46,86 @@ changeEl.addEventListener('click', function () {
     status = true;
   }
 });
+
+const reBtn1 = document.querySelector('.reservation_btn_1');
+const reBtn11 = document.querySelector('.reservation_btn_11');
+const reBtn2 = document.querySelector('.reservation_btn_2');
+const reBtn22 = document.querySelector('.reservation_btn_22');
+const reBtn3 = document.querySelector('.reservation_btn_3');
+const reBtn33 = document.querySelector('.reservation_btn_33');
+const reBtn4 = document.querySelector('.reservation_btn_4');
+
+const tabContent = document.querySelector('.search_tab_content');
+const tabReservation = document.querySelector('.search_tab_reservation');
+const tabCheckIn = document.querySelector('.search_tab_checkIn');
+
+
+// 예약 조회 탭
+reBtn2.addEventListener('click', function () {
+  // tabReservation.style.opacity = 1;
+  // tabContent.style.opacity = 0;
+  tabReservation.style.display = 'block';
+  tabCheckIn.style.display = 'none';
+
+
+  reBtn1.style.backgroundColor = '#2A3493';
+  reBtn11.style.color = '#fff';
+  reBtn1.style.borderRadius = '30px 30px 0 0';
+
+  reBtn2.style.backgroundColor = '#f1f1f1';
+  reBtn22.style.color = '#333';
+  reBtn2.style.borderRadius = '30px 30px 0 0';
+
+  reBtn3.style.backgroundColor = '#2A3493';
+  reBtn33.style.color = '#fff';
+  reBtn3.style.borderRadius = '30px 30px 0 0';
+});
+
+// 항공권 예매 탭
+reBtn1.addEventListener('click', function () {
+  // tabReservation.style.opacity = 0;
+  tabContent.style.display = 'flex';
+  tabReservation.style.display = 'none';
+  tabCheckIn.style.display = 'none';
+
+
+
+
+  // tabContent.style.opacity = 1;
+
+  reBtn2.style.backgroundColor = '#2A3493';
+  reBtn22.style.color = '#fff';
+  reBtn2.style.borderRadius = '30px 30px 0 0';
+
+  reBtn1.style.backgroundColor = '#f1f1f1';
+  reBtn11.style.color = '#333';
+  reBtn1.style.borderRadius = '30px 30px 0 0';
+
+  reBtn3.style.backgroundColor = '#2A3493';
+  reBtn33.style.color = '#fff';
+  reBtn3.style.borderRadius = '30px 30px 0 0';
+});
+
+// 체크인 탭
+reBtn3.addEventListener('click', function () {
+  // tabReservation.style.opacity = 0;
+  tabContent.style.display = 'flex';
+  tabReservation.style.display = 'none';
+  tabCheckIn.style.display = 'block';
+
+  reBtn2.style.backgroundColor = '#2A3493';
+  reBtn22.style.color = '#fff';
+  reBtn2.style.borderRadius = '30px 30px 0 0';
+
+  reBtn3.style.backgroundColor = '#f1f1f1';
+  reBtn33.style.color = '#333';
+  reBtn3.style.borderRadius = '30px 30px 0 0';
+
+  reBtn1.style.backgroundColor = '#2A3493';
+  reBtn11.style.color = '#fff';
+  reBtn1.style.borderRadius = '30px 30px 0 0';
+});
+
 
 
 // SALE_BOX SLIDES
@@ -47,39 +145,6 @@ const img2 = document.querySelector('.img2');
 
 let clickText = true;
 
-// clickText가 true
-
-// text2를 클릭해서
-// clickText이면 img2가 보이게하고 img1를 숨김
-// 그렇지 않고 text1을 클릭하면 img1보이고 img2 숨김
-
-// text2.addEventListener('click', function () {
-//   if (clickText) { 
-//     // img2.style.opacity = 1;
-//     img1.style.opacity = 0;
-//     clickText = false;
-//   }
-//   else if(clickText) {
-//     img1.style.opacity = 1;
-//     img2.style.opacity = 0;
-//     clickText = true;
-//   }
-// });
-
-
-// text2.addEventListener('click', function () {
-//   const hasHide = img2.classList.contains('hide');
-//   if (hasHide) {
-//     img2.classList.remove('hide');
-//     img2.style.display = 'block';
-//   } else {
-//     img1.classList.add('hide');
-//     img1.style.display = 'block';
-//   }
-// });
-
-
-
 text2.addEventListener('click', function () {
   // img2.style.display = 'block';
   img1.style.opacity = 0;
@@ -91,39 +156,6 @@ text1.addEventListener('click', function () {
   img1.style.opacity = 1;
   img2.style.opacity = 0;
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-// text1.addEventListener('click', function () {
-//   if (clickText) {
-//     img1.style.display = 'block';
-//     // img2.style.display = 'none';
-//     clickText = false;
-//   }
-// });
-
-// text2.addEventListener('click', function () {
-
-//   img2.style.display = 'block';
-//   img2.style.display = 'none';
-//   // clickText = false;
-// });
-
-// text1.addEventListener('click', function () {
-//   img1.style.display = 'block';
-//   img2.style.display = 'none';
-//   // clickText = false;
-// });
 
 
 
