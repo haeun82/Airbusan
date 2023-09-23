@@ -37,7 +37,7 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 9;
   background-color: #fff;
 }
 
@@ -1125,6 +1125,16 @@ footer .inner:nth-child(2) .f_b_icon04 {
 
 
 /* MODAL_ALL */
+input [type="date"]::before {
+  content:attr(data-placeholder);
+  width: 100%;
+}
+
+input [type="date"]:focus::before, 
+input [type="date"]:valid:before {
+  display: none;
+}
+
 .search_box .from_to_date {
   width: 50%;
   height: 100%;
@@ -1134,7 +1144,7 @@ footer .inner:nth-child(2) .f_b_icon04 {
   position: absolute;
   top: 250px;
   left: 300px;
-  z-index: 3;
+  z-index: 2;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;

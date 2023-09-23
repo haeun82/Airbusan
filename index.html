@@ -341,11 +341,15 @@
       <!-- 출발일 모달창 -->
       <div class="from_to_date">
         <div class="ft_date">
-          <label for="From">출발일</label>
-          <input type="date" id="from">
-          <label for="to">도착일</label>
-          <input type="date" id="to">
+          <label for="From">
+            출발일
+            <input type="date" id="from" data-placeholder="출발일 선택" required aria-required="true">
+          </label>
 
+          <label for="to">
+            도착일
+            <input type="date" id="to">
+          </label>
         </div>
         <span class="material-icons">close</span>
       </div>
