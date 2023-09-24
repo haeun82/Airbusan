@@ -1,3 +1,16 @@
+/* 반응형 */
+@media screen and (max-width: 768px) and (max-width: 1199px) {
+  header .sub-menu {
+    display: none;
+  }
+  header .main-menu {
+    display: none;
+  }
+}
+
+
+
+
 /* common */
 body {
   font-family: 'Noto Sans KR', sans-serif;
@@ -243,7 +256,7 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
 .search_box .search_tab li {
   width: 200px;
   height: 60px;
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
   border-radius: 30px 30px 0 0;
   text-align: center;
   line-height: 60px;
@@ -283,7 +296,7 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
 .search_box .search_tab_content {
   display: flex;
   height: 260px;
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
   border-radius: 0 0 30px 30px;
   box-shadow: 5px 5px 5px #c7c7c7;
   padding: 30px 40px;
@@ -372,8 +385,12 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   padding: 20px 0;
   border: none;
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.select_area .select_form span:first-child,
+
+.select_area .select_from .from:first-child,
 .select_area .select_to span:first-child {
   text-align: center;
   font-weight: 700;
@@ -405,8 +422,8 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   color: #c7c7c7;
 }
 
-.select_area .select_form h2:last-child,
-.select_area .select_to h2:last-child {
+.select_area .select_from span:last-child,
+.select_area .select_to span:last-child {
   font-size: 30px;
   text-align: center;
   font-weight: 700;
@@ -428,6 +445,14 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   display: flex;
   margin-top: 10px;
   padding-left: 30px;
+  font-size: 18px;
+}
+
+.search_box .search_tab_content .select_date .booking_type .type1:nth-child(1) {
+  font-weight: 700;
+  border-bottom: 5px solid #333;
+  border-radius: 3px;
+  
 }
 
 .search_box .search_tab_content .select_date .booking_type span {
@@ -471,6 +496,21 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   align-self: flex-end;
 }
 
+
+.search_box .btn_search::before {
+  content: '* 출/도착일과 승객, 좌석등급을 모두 선택해주세요!!';
+  display: none;
+  font-size: 14px;
+  position: absolute;
+  left: 15px;
+  font-weight: 700;
+  color: rgb(221, 2, 2);
+}
+
+.search_box .btn_search:focus::before {
+  display: block;
+}
+
 /* search_tab_reservation */
 
 .search_box .inner .search_tab_reservation {
@@ -479,7 +519,7 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   position: absolute;
   top: 60px;
   height: 320px;
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
   border-radius: 0 0 30px 30px;
   box-shadow: 5px 5px 5px #c7c7c7;
   padding: 30px 40px;
@@ -528,7 +568,7 @@ input[type="number"]::-webkit-inner-spin-button {
   position: absolute;
   top: 60px;
   height: 320px;
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
   border-radius: 0 0 30px 30px;
   box-shadow: 5px 5px 5px #c7c7c7;
   padding: 30px 40px;
@@ -568,6 +608,9 @@ input[type="number"]::-webkit-inner-spin-button {
 .search_box .inner .search_tab_checkIn button:last-child {
   width: 150px;
 }
+
+
+
 
 
 
@@ -1125,19 +1168,11 @@ footer .inner:nth-child(2) .f_b_icon04 {
 
 
 /* MODAL_ALL */
-input [type="date"]::before {
-  content:attr(data-placeholder);
-  width: 100%;
-}
 
-input [type="date"]:focus::before, 
-input [type="date"]:valid:before {
-  display: none;
-}
 
-.search_box .from_to_date {
+.search_box .date_select_box {
   width: 50%;
-  height: 100%;
+  height: 70%;
   background-color: #fff;
   border: 1px solid #b1b1b1;
   margin-top: 20px;
@@ -1151,13 +1186,53 @@ input [type="date"]:valid:before {
   padding: 20px;
 }
 
-.search_box .from_to_date .ft_date {
-  
+.search_box .from_to_date {
+  display: none;
 }
+
+.search_box .from_to_date .date_select_box {
+  display: flex;
+}
+
+.search_box .from_to_date .ft_date {
+  display: flex;
+}
+
+.search_box .from_to_date .ft_date input[type="date"]::-webkit-calendar-picker-indicator {
+  background-position: right;
+  background-size: auto;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: auto;
+}
+
+.search_box .from_to_date .ft_date input {
+  position: relative;
+}
+
+.search_box .date_select_box span:nth-child(2) {
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.search_box .from_to_date > span:nth-child(2) { 
+  font-size: 14px;
+  position: absolute;
+  top: 545px;
+  right: 270px;
+  z-index: 3;
+}
+
+
 
 .search_box .from_to_date span:nth-child(2) {
   /* align-self: flex-start; */
-  margin-left: 110px;
+  /* margin-left: 110px; */
 }
 .search_box .from_to_date input {
   /* cursor: pointer; */
@@ -1165,10 +1240,13 @@ input [type="date"]:valid:before {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #676767;
+  margin-left: 10px;
 }
 
 .search_box .from_to_date label {
   display: block;
+  font-weight: 700;
+  /* margin-right: 10px; */
 }
 
 
@@ -1176,12 +1254,174 @@ input [type="date"]:valid:before {
   margin-right: 20px;
 }
 
-.search_box .from_to_date .ft_date {
-  padding
+
+/* passenger_modal */
+.passenger_modal {
+  width: 60%;
+  height: 50%;
+  background-color: #fff;
+  border: 1px solid #b1b1b1;
+  margin-top: 20px;
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  z-index: 2;
+  border-radius: 10px;
+  padding: 20px;
+  display: none;
+}
+
+.passenger_modal .passenger_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.passenger_modal .passenger_title h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #2A3493;
+}
+
+.passenger_modal .passenger_title span.material-icons {
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.passenger_modal .count_wrap {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  margin-top: 30px;
+}
+
+.passenger_modal .count_wrap p {
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.passenger_modal .count_wrap span {
+  font-size: 30px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+
+.passenger_modal .count_wrap button#plus,
+.passenger_modal .count_wrap button#plus_1,
+.passenger_modal .count_wrap button#plus_2 { 
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 100%;
+  background-color: transparent;
+  margin: 10px 0 0 10px;
+  background-image: url(../images/passenger__control-add.svg);
+  cursor: pointer;
+}
+
+.passenger_modal .count_wrap button#minus,
+.passenger_modal .count_wrap button#minus_1,
+.passenger_modal .count_wrap button#minus_2 { 
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 100%;
+  background-color: transparent;
+  margin-right: 5px;
+  background-image: url(../images/passenger__control-sub.svg);
+  cursor: pointer;
 }
 
 
+/* 단체예약 버튼 모달창 */
+.group_booking {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
 
+.group_booking .modal_box {
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.group_booking .modal_box .modal_box_header {
+  padding: 5px;
+  background-color: #2A3493;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  box-sizing: border-box;
+}
+
+
+.group_booking .modal_box p {
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+.group_booking .modal_box .modal_box_content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.group_booking .modal_box .modal_box_content span {
+  text-align: center;
+}
+
+.group_booking .modal_box .modal_footer {
+  display:inline-flex;   
+  width: 100%;
+  height: 30px;
+  border-top: 1px solid #676767;
+  /* justify-content: center;
+  align-items: center; */
+  transition: background-color 0.3s;
+}
+
+.group_booking .modal_box .modal_footer .comfirm {
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #676767;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.group_booking .modal_box .modal_footer .comfirm:hover {
+  background-color: #2A3493;
+  color: #fff;
+  border-radius: 0 0 0 10px;
+}
+
+.group_booking .modal_box .modal_footer .close_2 {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.group_booking .modal_box .modal_footer .close_2:hover {
+  background-color: #2A3493;
+  color: #fff;
+  border-radius: 0 0 10px 0;
+}
 
 
 

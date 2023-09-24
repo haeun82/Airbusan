@@ -200,6 +200,9 @@
         </ul>
       </nav>
     </div>
+    <!-- <a href="#" class="btn-hamburger">
+      <span class="material-icons">menu</span>
+    </a> -->
   </header>
 
   <!-- VISUAL -->
@@ -238,7 +241,7 @@
           <a href="javascript:void(0)" class="reservation_btn_33">체크인</a>
         </li>
         <li class="reservation_btn_4">
-          <a href="javascript:void(0)">단체 예매</a>
+          <a href="javascript:void(0)" class="reservation_btn_44">단체 예매</a>
         </li>
       </ul>
       <div class="search_tab_content">
@@ -249,16 +252,16 @@
             </li>
           </ul>
           <div class="select_area">
-            <button type="button" class="select_form">
-              <span>From</span>
-              <h2>출발지</h2>
+            <button type="button" class="select_from">
+              <span class="from">From</span>
+              <span>출발지</span>
             </button>
             <div class="change">
               <span class="material-icons">cached</span>
             </div>
             <button type="button" class="select_to">
               <span>To</span>
-              <h2>도착지</h2>
+              <span>도착지</span>
             </button>
           </div>
           <div class="stamp_check">
@@ -276,11 +279,11 @@
           </div>
           
           <div class="booking_group">
-            <div class="booking_content">
+            <div class="booking_content bkc_01">
               <span>출발일 ~ 도착일</span>
               <span class="material-icons">calendar_today</span>
             </div>
-            <div class="booking_content">
+            <div class="booking_content bkc_02">
               <span>승객</span>
               <span class="material-icons">group</span>
             </div>
@@ -309,7 +312,7 @@
           </label>
           <label for="number">
             연락처
-            <input type="number" id="number" maxlength="12">
+            <input type="number" id="number">
           </label>
           <button type="button" class="btn_search">조회</button>
 
@@ -322,36 +325,67 @@
             예약번호
             <input type="text" id="checkIn_number" maxlength="12">
           </label>
-          <label for="first_name">
+          <label for="first_name_1">
             예약자 성
-            <input type="text" id="first_name" maxlength="5">
+            <input type="text" id="first_name_1" maxlength="5">
           </label>
-          <label for="last_name">
+          <label for="last_name_1">
             예약자 이름
-            <input type="text" id="last_name" maxlength="5">
+            <input type="text" id="last_name_1" maxlength="5">
           </label>
-          <label for="number">
+          <label for="number_1">
             출발일
-            <input type="number" id="number" maxlength="12">
+            <input type="number" id="number_1">
           </label>
           <button type="button" class="btn_search">조회</button>
         </div>
       </div>
 
-      <!-- 출발일 모달창 -->
+      <!-- 출발일~도착일 모달창 -->
       <div class="from_to_date">
-        <div class="ft_date">
-          <label for="From">
-            출발일
-            <input type="date" id="from" data-placeholder="출발일 선택" required aria-required="true">
-          </label>
-
-          <label for="to">
-            도착일
-            <input type="date" id="to">
-          </label>
+        <div class="date_select_box">
+          <div class="ft_date">
+            <label for="from">
+              출발일
+              <input type="date" id="from">
+            </label>
+  
+            <label for="to">
+              도착일
+              <input type="date" id="to">
+            </label>
+          </div>
+          <span class="material-icons close">close</span>
         </div>
-        <span class="material-icons">close</span>
+        <span>날짜선택은 현재 비활성화 상태입니다.</span>
+      </div>
+
+      <!-- 승객 모달창 -->
+      <div class="passenger_modal">
+        <div class="passenger_title">
+          <h3>승객 선택</h3>
+          <span class="material-icons close_1">close</span>
+        </div>
+        <div class="count_wrap">
+          <div class="adult">
+            <p class="adult_count">성인</p>
+            <button type="button" id="minus"></button>
+            <span class="adult_count">0</span>
+            <button type="button" id="plus"></button>
+          </div>
+          <div class="child">
+            <p class="child_count">소아</p>
+            <button type="button" id="minus_1"></button>
+            <span class="child_count">0</span>
+            <button type="button" id="plus_1"></button>
+          </div>
+          <div class="infant">
+            <p class="infant_count">영아</p>
+            <button type="button" id="minus_2"></button>
+            <span class="infant_count">0</span>
+            <button type="button" id="plus_2"></button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -648,5 +682,23 @@
       <img src="./images/img_fot_logo02.png" alt="Airbusan_하단 로고" class="f_b_icon05">
     </div>
   </footer>
+
+  <!-- 전체 기준 모달창 -->
+  <div class="group_booking">
+    <div class="modal_box">
+      <div class="modal_box_header">
+        <p>단체 예약 안내</p>
+      </div>
+      <div class="modal_box_content">
+        <span>단체예약은 로그인이 필요합니다.</span>
+        <span>로그인하시겠습니까?</span>
+      </div>
+    
+      <div class="modal_footer">
+        <span class="comfirm">예</span>
+        <span class="close_2">아니요</span>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

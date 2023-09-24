@@ -72,7 +72,7 @@ reBtn2.addEventListener('click', function () {
   reBtn11.style.color = '#fff';
   reBtn1.style.borderRadius = '30px 30px 0 0';
 
-  reBtn2.style.backgroundColor = '#f1f1f1';
+  reBtn2.style.backgroundColor = '#f8f8f8';
   reBtn22.style.color = '#333';
   reBtn2.style.borderRadius = '30px 30px 0 0';
 
@@ -89,15 +89,11 @@ reBtn1.addEventListener('click', function () {
   tabCheckIn.style.display = 'none';
 
 
-
-
-  // tabContent.style.opacity = 1;
-
   reBtn2.style.backgroundColor = '#2A3493';
   reBtn22.style.color = '#fff';
   reBtn2.style.borderRadius = '30px 30px 0 0';
 
-  reBtn1.style.backgroundColor = '#f1f1f1';
+  reBtn1.style.backgroundColor = '#f8f8f8';
   reBtn11.style.color = '#333';
   reBtn1.style.borderRadius = '30px 30px 0 0';
 
@@ -117,7 +113,7 @@ reBtn3.addEventListener('click', function () {
   reBtn22.style.color = '#fff';
   reBtn2.style.borderRadius = '30px 30px 0 0';
 
-  reBtn3.style.backgroundColor = '#f1f1f1';
+  reBtn3.style.backgroundColor = '#f8f8f8';
   reBtn33.style.color = '#333';
   reBtn3.style.borderRadius = '30px 30px 0 0';
 
@@ -126,6 +122,108 @@ reBtn3.addEventListener('click', function () {
   reBtn1.style.borderRadius = '30px 30px 0 0';
 });
 
+
+
+// 출발일~도착일 탭
+const bkc01 = document.querySelector('.booking_content.bkc_01');
+const fromToDate = document.querySelector('.from_to_date');
+const closeBtn = document.querySelector('.close');
+
+
+// bck01.addEventListener('click', function () {
+//   fromToDate.style.display = 'block';
+// });
+
+bkc01.addEventListener('click', function () {
+  fromToDate.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', function () {
+  fromToDate.style.display = 'none';
+});
+
+
+
+// 승객 인원 선택 탭
+
+// 열고 닫기
+const passengerModal = document.querySelector('.passenger_modal');
+const closePassenger = document.querySelector('.close_1');
+const passengerBtn = document.querySelector('.bkc_02');
+
+
+passengerBtn.addEventListener('click', function () {
+  passengerModal.style.display = 'block';
+});
+
+closePassenger.addEventListener('click', function () {
+  passengerModal.style.display = 'none';
+});
+
+
+
+// 성인
+// let adult = document.querySelector('.adult');
+const plusBtn = document.querySelector('#plus');
+const minusBtn = document.querySelector('#minus');
+const number = document.querySelector('.adult_count');
+
+plusBtn.addEventListener('click',function(){
+  let count = Number(number.textContent)
+    count = count + 1;
+    number.textContent = count;
+});
+minusBtn.addEventListener('click',function(){
+  let count = Number(number.textContent)
+    count = count - 1;
+    number.textContent = count;
+});
+
+// 소아
+const plusBtnChild = document.querySelector('#plus_1');
+const minusBtnChild = document.querySelector('#minus_1');
+const numberChild = document.querySelector('.child_count');
+
+plusBtnChild.addEventListener('click',function(){
+  let countText = Number(numberChild.textContent)
+    countText = countText + 1;
+    numberChild.textContent = countText;
+});
+minusBtnChild.addEventListener('click',function(){
+  let countText = Number(numberChild.textContent)
+    countText = countText - 1;
+    numberChild.textContent = countText;
+});
+
+// 영아
+const plusBtnInfant = document.querySelector('#plus_2');
+const minusBtnInfant = document.querySelector('#minus_2');
+const numberInfant = document.querySelector('.infant_count');
+
+plusBtnInfant.addEventListener('click',function(){
+  let countTextTwo = Number(numberInfant.textContent)
+    countTextTwo = countTextTwo + 1;
+    numberInfant.textContent = countTextTwo;
+});
+minusBtnInfant.addEventListener('click',function(){
+  let countTextTwo = Number(numberInfant.textContent)
+    countTextTwo = countTextTwo - 1;
+    numberInfant.textContent = countTextTwo;
+});
+
+// 단체 예약 모달 띄우기
+
+const groupBooking = document.querySelector('.group_booking');
+const closeModalBtn = document.querySelector('.close_2');
+const reservationTab = document.querySelector('.reservation_btn_44');
+
+reservationTab.addEventListener('click',function () {
+  groupBooking.style.display = 'flex';
+});
+
+closeModalBtn.addEventListener('click',function () {
+  groupBooking.style.display = 'none';
+});
 
 
 // SALE_BOX SLIDES
