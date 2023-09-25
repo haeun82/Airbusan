@@ -316,30 +316,20 @@ header .inner .btn-hamburger {
   line-height: 60px;
 }
 
-/* .search_box .search_tab li.reservation_btn_1 a {
-  color: #333;
-}
-
-.search_box .search_tab li:nth-child(2),
-.search_box .search_tab li:nth-child(3),
 .search_box .search_tab li:nth-child(4) {
   background-color: #2A3493;
 }
 
-
-.search_box .search_tab > li:nth-child(2) > a:nth-child(1),
-.search_box .search_tab > li:nth-child(3) > a:nth-child(1),
 .search_box .search_tab > li:nth-child(4) > a:nth-child(1) {
   color: #fff;
-} */
+}
 
 .search_box .search_tab li a {
   display: block;
-  width: 200px;
+  width: 100%;
   height: 60px;
   font-size: 20px;
   font-weight: 700;
-  /* color: #fff; */
 }
 
 .search_box .search_tab .tab_btn {
@@ -386,7 +376,7 @@ header .inner .btn-hamburger {
   border: none;
   border-radius: 100px;
   font-weight: 700;
-  background-color: #0095DA;
+  background-color: #717171;
   color: #fff;
 }
 .select_box {
@@ -398,6 +388,8 @@ header .inner .btn-hamburger {
   display: flex;
   align-items: flex-end;
   margin-top: 30px;
+  margin-bottom: 30px;
+
   opacity: 0;
 }
 
@@ -918,7 +910,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* TRAVEL_SERVICE */
 .travel_service {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .travel_service .inner .title h2 {
@@ -966,8 +958,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* NOTICE */
 .notice {
-  margin-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
 
 .notice .inner {
@@ -1563,7 +1554,7 @@ footer .inner:nth-child(2) .f_b_icon04 {
 
   .search_box .inner .search_tab_content {
     width: 100%;
-    height: 100%;
+    height: 829px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -1683,8 +1674,104 @@ footer .inner:nth-child(2) .f_b_icon04 {
     height: 65px;
     font-size: 30px;
   }
+
+  /* sale_box */
   .sale_box .inner .title {
     text-align: center;
+  }
+  .sale_box .inner .title .title_wrap {
+    display: block;
+  }
+
+  .sale_box .inner .title .title_wrap > h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .sale_box .inner .title .title_wrap .btn_sale_more {
+    width: 200px;
+    font-size: 18px;
+  }
+
+  /* goods */
+  .goods .inner .title {
+    text-align: center;
+  }
+  .goods .inner .title .title_wrap {
+    display: block;
+  }
+
+  .goods .inner .title .title_wrap > h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .goods .inner .title .title_wrap .btn_sale_more {
+    width: 200px;
+    font-size: 18px;
+  }
+
+  /* travel_service */
+  .travel_service .inner {
+    width: 80%;
+  }
+
+  .travel_service .inner .title {
+    text-align: center;
+  }
+
+  .travel_service .inner .title > h2 {
+    font-size: 40px;
+  }
+
+
+  .travel_service .inner .icons {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  /* notice */
+  .notice .inner {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .notice .inner .notice_box {
+    width: 100%;
+  }
+
+  .notice .inner .benefit_box {
+    width: 100%;
+    height: 550px;
+  }
+
+  .notice .inner .benefit_box > h3 {
+    font-size: 50px;
+  }
+
+  .notice .inner .benefit_box .benefit_01_title a {
+    font-size: 40px;
+  }
+
+  .notice .inner .benefit_box .benefit_01_title a.text2 {
+    margin-bottom: 100px;
+  }
+
+  .notice .inner .benefit_box img {
+    width: 640px;
+    height: 420px;
+  }
+
+  .notice .inner .benefit_box .benefit_01 .benefit_01_title > a::after,
+  .notice .inner .benefit_box .benefit_02 .benefit_02_title > a::after {
+    width: 100px;
+    border-bottom: solid 10px #d9d9d9;
+  }
+
+  .notice .inner .benefit_box p {
+    font-size: 60px;
   }
 }
 
