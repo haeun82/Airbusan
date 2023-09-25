@@ -1,13 +1,3 @@
-/* 반응형 */
-@media screen and (max-width: 768px) and (max-width: 1199px) {
-  header .sub-menu {
-    display: none;
-  }
-  header .main-menu {
-    display: none;
-  }
-}
-
 
 
 
@@ -169,6 +159,70 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   color: #333;
 }
 
+header .inner .btn-hamburger {
+  display: none;
+}
+
+.menu_media {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  z-index: 13;
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-sizing: border-box;
+  transition:  0.5s;
+}
+
+.menu_media.active {
+  right: 0;
+}
+
+.menu_media .menu_icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_media .menu_icons .material-icons {
+  font-size: 80px;
+  cursor: pointer;
+}
+
+.menu_media .menu_list {
+  margin-top: 20px;
+}
+
+.menu_media .menu_list > ul > li {
+  margin: 10px 0;
+}
+
+.menu_media .menu_list > ul > li > a {
+  font-size: 60px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.menu_media .menu_list > ul > li > a::after {
+  display: block;
+  content: '';
+  padding-bottom: 20px;
+  border-bottom: 10px solid #2A3493;
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+  transform-origin: 0% 50%;
+
+}
+
+
+.menu_media .menu_list > ul > li > a:hover::after {
+  transform: scaleX(1);
+}
+
+
+
+
 
 /* VISUAL */
 .visual {
@@ -272,9 +326,6 @@ header .inner .main-menu .item_content .inner ul li .bold_title {
   background-color: #2A3493;
 }
 
-/* .search_box .search_tab > li > a:nth-child(1) {
-  color: #333;
-} */
 
 .search_box .search_tab > li:nth-child(2) > a:nth-child(1),
 .search_box .search_tab > li:nth-child(3) > a:nth-child(1),
@@ -1423,6 +1474,141 @@ footer .inner:nth-child(2) .f_b_icon04 {
   border-radius: 0 0 10px 0;
 }
 
+
+
+/* 반응형 */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+  /* header */
+  header .inner div.sub-menu {
+    display: none;
+  }
+  header .inner nav.main-menu {
+    display: none;
+  }
+  
+  header .inner .logo {
+    position: static;
+  }
+  header .inner {
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .inner .btn-hamburger {
+    display: flex;
+
+  }
+  header .inner .btn-hamburger span.material-icons {
+    font-size: 60px;
+    color: #2A3493;
+  }
+
+  /* visual */
+  .visual {
+    height: 35.94vw;
+    margin-top: 100px;
+  }
+
+  .visual .swiper-button-prev,
+  .visual .swiper-button-next {
+    display: none;
+  }
+
+  /* search_box */
+  .search_box .inner .search_tab {
+    justify-content: center;
+  }
+
+  .search_box .inner {
+    width: 80%;
+  }
+
+  .search_box .inner .search_tab {
+    width: 100%;
+  }
+
+  .search_box .inner .search_tab > li {
+    width: 25%;
+  }
+
+  .search_box .inner .search_tab_content {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .search_box .search_tab_content .select_btn > li > button:nth-child(1) {
+    font-size: 20px;
+  }
+
+  .search_box .search_tab_content .select_date .booking_type {
+    justify-content: center;
+  }
+
+  
+  .select_area .select_from:last-child,
+  .select_area .select_to:last-child  {
+    display: inline-block;
+    
+  }
+
+  .select_area .select_from span:last-child,
+  .select_area .select_to span:last-child {
+    display: block;
+    width: 90px;
+  }
+
+
+  .search_box .search_tab_content .booking_group {
+    flex-direction: column;
+  }
+
+  .search_box .booking_group div + div {
+    margin-left: 0;
+  }
+  .search_box .booking_group .booking_content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .search_box .booking_group span:first-child {
+    font-size: 18px;
+    font-weight: 700;
+    color: #676767;
+  }
+
+  .search_box .search_tab_content .select_date .booking_type {
+    font-size: 20px;
+  }
+
+  .select_area .change {
+    width: 60px;
+  }
+
+  .search_box .btn_search {
+    width: 100%;
+    height: 70px;
+    margin: 30px 0;
+    padding: 20px 30px;
+    font-size: 25px;
+  }
+
+  .search_box .btn_search::before {
+    content: '* 출/도착일과 승객, 좌석등급을 모두 선택해주세요!!';
+    display: none;
+    font-size: 14px;
+    position: absolute;
+    Left: 50%;
+    Top: 100%;
+    Transform: translate(-50%, -50%);  
+    font-weight: 700;
+    color: rgb(221, 2, 2);
+  }
+}
 
 
 
