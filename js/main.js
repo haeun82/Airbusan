@@ -47,6 +47,24 @@ changeEl.addEventListener('click', function () {
   }
 });
 
+
+const tabBtns = document.querySelectorAll('.tab_btn');
+const tabContents = document.querySelectorAll('.tab_content');
+tabBtns.forEach(function (tabBtn, index) {
+  tabBtn.addEventListener('click', function () {
+    tabBtns.forEach(function (btn) {
+      btn.classList.remove('active');
+    });
+    tabBtns[index].classList.add('active');
+
+    tabContents.forEach(function (content) {
+      content.style.display = 'none';
+    });
+    tabContents[index].style.display = 'block';
+  });
+});
+
+
 const reBtn1 = document.querySelector('.reservation_btn_1');
 const reBtn11 = document.querySelector('.reservation_btn_11');
 const reBtn2 = document.querySelector('.reservation_btn_2');
@@ -59,68 +77,69 @@ const tabContent = document.querySelector('.search_tab_content');
 const tabReservation = document.querySelector('.search_tab_reservation');
 const tabCheckIn = document.querySelector('.search_tab_checkIn');
 
+// // 항공권 예매 탭
+// reBtn1.addEventListener('click', function () {
+//   // tabReservation.style.opacity = 0;
+//   tabContent.style.display = 'flex';
+//   tabReservation.style.display = 'none';
+//   tabCheckIn.style.display = 'none';
+
+
+//   reBtn2.style.backgroundColor = '#2A3493';
+//   reBtn22.style.color = '#fff';
+//   reBtn2.style.borderRadius = '30px 30px 0 0';
+
+//   reBtn1.style.backgroundColor = '#f8f8f8';
+//   reBtn11.style.color = '#333';
+//   reBtn1.style.borderRadius = '30px 30px 0 0';
+
+//   reBtn3.style.backgroundColor = '#2A3493';
+//   reBtn33.style.color = '#fff';
+//   reBtn3.style.borderRadius = '30px 30px 0 0';
+// });
 
 // 예약 조회 탭
-reBtn2.addEventListener('click', function () {
-  // tabReservation.style.opacity = 1;
-  // tabContent.style.opacity = 0;
-  tabReservation.style.display = 'block';
-  tabCheckIn.style.display = 'none';
+// reBtn2.addEventListener('click', function () {
+//   // tabReservation.style.opacity = 1;
+//   // tabContent.style.opacity = 0;
+//   tabReservation.style.display = 'block';
+//   tabCheckIn.style.display = 'none';
 
 
-  reBtn1.style.backgroundColor = '#2A3493';
-  reBtn11.style.color = '#fff';
-  reBtn1.style.borderRadius = '30px 30px 0 0';
+//   reBtn1.style.backgroundColor = '#2A3493';
+//   reBtn11.style.color = '#fff';
+//   reBtn1.style.borderRadius = '30px 30px 0 0';
 
-  reBtn2.style.backgroundColor = '#f8f8f8';
-  reBtn22.style.color = '#333';
-  reBtn2.style.borderRadius = '30px 30px 0 0';
+//   reBtn2.style.backgroundColor = '#f8f8f8';
+//   reBtn22.style.color = '#333';
+//   reBtn2.style.borderRadius = '30px 30px 0 0';
 
-  reBtn3.style.backgroundColor = '#2A3493';
-  reBtn33.style.color = '#fff';
-  reBtn3.style.borderRadius = '30px 30px 0 0';
-});
-
-// 항공권 예매 탭
-reBtn1.addEventListener('click', function () {
-  // tabReservation.style.opacity = 0;
-  tabContent.style.display = 'flex';
-  tabReservation.style.display = 'none';
-  tabCheckIn.style.display = 'none';
+//   reBtn3.style.backgroundColor = '#2A3493';
+//   reBtn33.style.color = '#fff';
+//   reBtn3.style.borderRadius = '30px 30px 0 0';
+// });
 
 
-  reBtn2.style.backgroundColor = '#2A3493';
-  reBtn22.style.color = '#fff';
-  reBtn2.style.borderRadius = '30px 30px 0 0';
 
-  reBtn1.style.backgroundColor = '#f8f8f8';
-  reBtn11.style.color = '#333';
-  reBtn1.style.borderRadius = '30px 30px 0 0';
+// // 체크인 탭
+// reBtn3.addEventListener('click', function () {
+//   // tabReservation.style.opacity = 0;
+//   tabContent.style.display = 'flex';
+//   tabReservation.style.display = 'none';
+//   tabCheckIn.style.display = 'block';
 
-  reBtn3.style.backgroundColor = '#2A3493';
-  reBtn33.style.color = '#fff';
-  reBtn3.style.borderRadius = '30px 30px 0 0';
-});
+//   reBtn2.style.backgroundColor = '#2A3493';
+//   reBtn22.style.color = '#fff';
+//   reBtn2.style.borderRadius = '30px 30px 0 0';
 
-// 체크인 탭
-reBtn3.addEventListener('click', function () {
-  // tabReservation.style.opacity = 0;
-  tabContent.style.display = 'flex';
-  tabReservation.style.display = 'none';
-  tabCheckIn.style.display = 'block';
+//   reBtn3.style.backgroundColor = '#f8f8f8';
+//   reBtn33.style.color = '#333';
+//   reBtn3.style.borderRadius = '30px 30px 0 0';
 
-  reBtn2.style.backgroundColor = '#2A3493';
-  reBtn22.style.color = '#fff';
-  reBtn2.style.borderRadius = '30px 30px 0 0';
-
-  reBtn3.style.backgroundColor = '#f8f8f8';
-  reBtn33.style.color = '#333';
-  reBtn3.style.borderRadius = '30px 30px 0 0';
-
-  reBtn1.style.backgroundColor = '#2A3493';
-  reBtn11.style.color = '#fff';
-  reBtn1.style.borderRadius = '30px 30px 0 0';
-});
+//   reBtn1.style.backgroundColor = '#2A3493';
+//   reBtn11.style.color = '#fff';
+//   reBtn1.style.borderRadius = '30px 30px 0 0';
+// });
 
 
 
@@ -169,12 +188,12 @@ const minusBtn = document.querySelector('#minus');
 const number = document.querySelector('.adult_count');
 
 plusBtn.addEventListener('click',function(){
-  let count = Number(number.textContent)
+  let count = Number(number.textContent);
     count = count + 1;
     number.textContent = count;
 });
 minusBtn.addEventListener('click',function(){
-  let count = Number(number.textContent)
+  let count = Number(number.textContent);
     count = count - 1;
     number.textContent = count;
 });
@@ -185,12 +204,12 @@ const minusBtnChild = document.querySelector('#minus_1');
 const numberChild = document.querySelector('.child_count');
 
 plusBtnChild.addEventListener('click',function(){
-  let countText = Number(numberChild.textContent)
+  let countText = Number(numberChild.textContent);
     countText = countText + 1;
     numberChild.textContent = countText;
 });
 minusBtnChild.addEventListener('click',function(){
-  let countText = Number(numberChild.textContent)
+  let countText = Number(numberChild.textContent);
     countText = countText - 1;
     numberChild.textContent = countText;
 });
@@ -201,12 +220,12 @@ const minusBtnInfant = document.querySelector('#minus_2');
 const numberInfant = document.querySelector('.infant_count');
 
 plusBtnInfant.addEventListener('click',function(){
-  let countTextTwo = Number(numberInfant.textContent)
+  let countTextTwo = Number(numberInfant.textContent);
     countTextTwo = countTextTwo + 1;
     numberInfant.textContent = countTextTwo;
 });
 minusBtnInfant.addEventListener('click',function(){
-  let countTextTwo = Number(numberInfant.textContent)
+  let countTextTwo = Number(numberInfant.textContent);
     countTextTwo = countTextTwo - 1;
     numberInfant.textContent = countTextTwo;
 });

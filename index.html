@@ -247,72 +247,75 @@
   <section class="search_box">
     <div class="inner">
       <ul class="search_tab">
-        <li class="reservation_btn_1">
+        <li class="reservation_btn_1 tab_btn active">
           <a href="javascript:void(0)" class="reservation_btn_11">항공권 예매</a>
         </li>
-        <li class="reservation_btn_2">
+        <li class="reservation_btn_2 tab_btn">
           <a href="javascript:void(0)" class="reservation_btn_22">예약 조회</a>
         </li>
-        <li class="reservation_btn_3">
+        <li class="reservation_btn_3 tab_btn">
           <a href="javascript:void(0)" class="reservation_btn_33">체크인</a>
         </li>
-        <li class="reservation_btn_4">
+        <li class="reservation_btn_4 tab_btn">
           <a href="javascript:void(0)" class="reservation_btn_44">단체 예매</a>
         </li>
       </ul>
-      <div class="search_tab_content">
-        <div class="select_box">
-          <ul class="select_btn">
-            <li>
-              <button type="button">스탬프 예매</button>
-            </li>
-          </ul>
-          <div class="select_area">
-            <button type="button" class="select_from">
-              <span class="from">From</span>
-              <span>출발지</span>
-            </button>
-            <div class="change">
-              <span class="material-icons">cached</span>
+      <div class="tab_content">
+        <div class="search_tab_content">
+          <div class="select_box">
+            <ul class="select_btn">
+              <li>
+                <button type="button">스탬프 예매</button>
+              </li>
+            </ul>
+            <div class="select_area">
+              <button type="button" class="select_from">
+                <span class="from">From</span>
+                <span>출발지</span>
+              </button>
+              <div class="change">
+                <span class="material-icons">cached</span>
+              </div>
+              <button type="button" class="select_to">
+                <span>To</span>
+                <span>도착지</span>
+              </button>
             </div>
-            <button type="button" class="select_to">
-              <span>To</span>
-              <span>도착지</span>
-            </button>
+            <div class="stamp_check">
+              <label for="stamp">스탬프 조회</label>
+              <input type="text" id="stamp"  placeholder="예매자명" class="hidden">
+              <span class="material-icons">search</span>
+              
+            </div>
           </div>
-          <div class="stamp_check">
-            <label for="stamp">스탬프 조회</label>
-            <input type="text" id="stamp"  placeholder="예매자명" class="hidden">
-            <span class="material-icons">search</span>
+          <div class="select_date">
+            <div class="booking_type">
+              <span class="type1">왕복</span>
+              <span class="type1">편도</span>
+              <span class="type1">다구간</span>
+            </div>
             
+            <div class="booking_group">
+              <div class="booking_content bkc_01">
+                <span>출발일 ~ 도착일</span>
+                <span class="material-icons">calendar_today</span>
+              </div>
+              <div class="booking_content bkc_02">
+                <span>승객</span>
+                <span class="material-icons">group</span>
+              </div>
+              <div class="booking_content">
+                <span>좌석 등급</span>
+                <span class="material-icons">chair</span>
+              </div>
+            </div>
+          <button type="button" class="btn_search">항공권 검색</button>
+  
           </div>
         </div>
-        <div class="select_date">
-          <div class="booking_type">
-            <span class="type1">왕복</span>
-            <span class="type1">편도</span>
-            <span class="type1">다구간</span>
-          </div>
-          
-          <div class="booking_group">
-            <div class="booking_content bkc_01">
-              <span>출발일 ~ 도착일</span>
-              <span class="material-icons">calendar_today</span>
-            </div>
-            <div class="booking_content bkc_02">
-              <span>승객</span>
-              <span class="material-icons">group</span>
-            </div>
-            <div class="booking_content">
-              <span>좌석 등급</span>
-              <span class="material-icons">chair</span>
-            </div>
-          </div>
-        <button type="button" class="btn_search">항공권 검색</button>
 
-        </div>
       </div>
-      <div class="search_tab_reservation">
+      <div class="search_tab_reservation tab_content">
         <div class="reservation_btn">
           <label for="reservation_number">
             예약번호
@@ -335,7 +338,7 @@
         </div>
 
       </div>
-      <div class="search_tab_checkIn">
+      <div class="search_tab_checkIn tab_content">
         <div class="checkIn_btn">
           <label for="checkIn_number">
             예약번호

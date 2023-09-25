@@ -297,6 +297,7 @@ header .inner .btn-hamburger {
 
 .search_box .inner {
   position: relative;
+  height: 380px;
 }
 
 .search_box button {
@@ -316,7 +317,7 @@ header .inner .btn-hamburger {
   line-height: 60px;
 }
 
-.search_box .search_tab li.reservation_btn_1 a {
+/* .search_box .search_tab li.reservation_btn_1 a {
   color: #333;
 }
 
@@ -331,7 +332,7 @@ header .inner .btn-hamburger {
 .search_box .search_tab > li:nth-child(3) > a:nth-child(1),
 .search_box .search_tab > li:nth-child(4) > a:nth-child(1) {
   color: #fff;
-}
+} */
 
 .search_box .search_tab li a {
   display: block;
@@ -339,7 +340,22 @@ header .inner .btn-hamburger {
   height: 60px;
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  /* color: #fff; */
+}
+
+.search_box .search_tab .tab_btn {
+  background-color: rgb(42, 52, 147);
+  border-radius: 30px 30px 0px 0px;
+}
+.search_box .search_tab .tab_btn a {
+  color: rgb(255, 255, 255);
+}
+.search_box .search_tab .tab_btn.active {
+  background-color: rgb(248, 248, 248);
+  border-radius: 30px 30px 0px 0px;
+}
+.search_box .search_tab .tab_btn.active a {
+  color: rgb(51, 51, 51);
 }
 
 /* search_tab_content */
@@ -1368,7 +1384,7 @@ footer .inner:nth-child(2) .f_b_icon04 {
   border-radius: 100%;
   background-color: transparent;
   margin: 10px 0 0 10px;
-  background-image: url(../images/passenger__control-add.svg);
+  background-image: url("../images/passenger__control-add.svg");
   cursor: pointer;
 }
 
@@ -1523,6 +1539,7 @@ footer .inner:nth-child(2) .f_b_icon04 {
 
   .search_box .inner {
     width: 80%;
+    height: 843px;
   }
 
   .search_box .inner .search_tab {
@@ -1602,9 +1619,9 @@ footer .inner:nth-child(2) .f_b_icon04 {
     display: none;
     font-size: 14px;
     position: absolute;
-    Left: 50%;
-    Top: 100%;
-    Transform: translate(-50%, -50%);  
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);  
     font-weight: 700;
     color: rgb(221, 2, 2);
   }
