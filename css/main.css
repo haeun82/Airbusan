@@ -297,7 +297,6 @@ header .inner .btn-hamburger {
 
 .search_box .inner {
   position: relative;
-  height: 380px;
 }
 
 .search_box button {
@@ -596,8 +595,8 @@ header .inner .btn-hamburger {
 .search_box .inner .search_tab_reservation {
   width: 100%;
   box-sizing: border-box;
-  position: absolute;
-  top: 60px;
+  /* position: absolute;
+  top: 60px; */
   height: 320px;
   background-color: #f8f8f8;
   border-radius: 0 0 30px 30px;
@@ -645,8 +644,8 @@ input[type="number"]::-webkit-inner-spin-button {
 .search_box .inner .search_tab_checkIn {
   width: 100%;
   box-sizing: border-box;
-  position: absolute;
-  top: 60px;
+  /* position: absolute;
+  top: 60px; */
   height: 320px;
   background-color: #f8f8f8;
   border-radius: 0 0 30px 30px;
@@ -1552,7 +1551,6 @@ footer .inner:nth-child(2) .f_b_icon04 {
 
   .search_box .inner {
     width: 80%;
-    height: 843px;
   }
 
   .search_box .inner .search_tab {
