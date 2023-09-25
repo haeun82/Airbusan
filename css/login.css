@@ -1,0 +1,371 @@
+/* common */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+  /* 위 속성들은 모두 상속되기에 전체 스타일을 한번에 제어 */
+  /* overflow-x: hidden; */
+
+  height: 3000px;
+}
+
+a {
+  /* 밑줄 제거 */
+  text-decoration: none;
+  color: #161616;
+}
+
+.inner {
+  max-width: 1200px; 
+  margin: 0 auto;
+  position: relative;
+}
+
+img {
+  display: block;
+}
+
+/* .swiper-slide {
+  width: 36%;
+} */
+
+
+/* header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background-color: #fff;
+}
+
+header > .inner {
+  height: 130px;
+  display: flex;
+}
+
+header .logo {
+  position: absolute;
+  top: 70px;
+}
+
+header .inner .sub-menu {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+header .inner .sub-menu span {
+  font-size: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+header .inner .sub-menu span:hover {
+  font-weight: 700;
+  color: #0095DA;
+}
+
+
+header .inner .sub-menu #group {
+  margin-right: 10px;
+}
+
+header .inner .sub-menu #group,
+header .inner .sub-menu #lang_group {
+  width: 100px;
+  cursor: pointer;
+}
+
+header .inner .main-menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+header .inner .main-menu > ul {
+  display: flex;
+}
+
+header .inner .main-menu > ul > li {
+  cursor: pointer;
+}
+header .inner .main-menu > ul > li {
+  margin: 0 40px;
+}
+
+header .inner .main-menu .item_content {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 130px;
+  display: none;
+  background-color: #fbfbfb;
+}
+
+header .inner .main-menu > ul > li:hover .item_content {
+  display: block;
+}
+
+header .inner .main-menu > ul > li > a {
+  padding: 0 30px;
+}
+
+
+header .inner .main-menu > ul > li::after {
+  display: block;
+  content: '';
+  padding-bottom: 20px;
+  border-bottom: 5px solid #2A3493;
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+
+
+header .inner .main-menu > ul > li:hover::after {
+  transform: scaleX(1);
+}
+
+header .inner .main-menu .item_content .inner {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+header .inner .main-menu .item_content .inner ul {
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+header .inner .main-menu .item_content .inner ul li {
+  padding-bottom: 10px;
+
+}
+
+header .inner .main-menu .item_content .inner ul li:hover a:not(.bold_title) {
+  font-weight: 700;
+  color: #676767;
+
+}
+
+header .inner .main-menu .item_content .inner ul li .bold_title {
+  font-weight: bold;
+  font-size: 17px;
+  color: #333;
+}
+
+header .inner .btn-hamburger {
+  display: none;
+}
+
+.menu_media {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  z-index: 13;
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-sizing: border-box;
+  transition:  0.5s;
+}
+
+.menu_media.active {
+  right: 0;
+}
+
+.menu_media .menu_icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_media .menu_icons .material-icons {
+  font-size: 80px;
+  cursor: pointer;
+}
+
+.menu_media .menu_list {
+  margin-top: 20px;
+}
+
+.menu_media .menu_list > ul > li {
+  margin: 10px 0;
+}
+
+.menu_media .menu_list > ul > li > a {
+  font-size: 60px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.menu_media .menu_list > ul > li > a::after {
+  display: block;
+  content: '';
+  padding-bottom: 20px;
+  border-bottom: 10px solid #2A3493;
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+  transform-origin: 0% 50%;
+
+}
+
+
+.menu_media .menu_list > ul > li > a:hover::after {
+  transform: scaleX(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer .footer-wrap {
+  width: 100%;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+footer .footer-wrap .inner {
+  padding: 50px 25px;
+  display: flex;
+}
+
+/* footer_left */
+footer .footer-wrap .inner .footer_left {
+  width: 70%;
+}
+footer .footer-wrap .inner .footer_left ul li:hover a {
+  font-weight: 700;
+  color: #353535;
+}
+footer .footer-wrap .inner .footer_left ul + ul {
+  margin-top: 10px;
+}
+
+footer .footer-wrap .inner .footer_left ul:nth-child(1) {
+  display: flex;
+}
+
+footer .footer-wrap .inner .footer_left ul:nth-child(1) > li {
+  margin-right: 20px;
+}
+footer .footer-wrap .inner .footer_left ul:nth-child(2) {
+  display: flex;
+}
+
+footer .footer-wrap .inner .footer_left ul:nth-child(2) > li {
+  margin-right: 20px;
+}
+
+footer .footer-wrap .inner .footer_left ul:nth-child(3) {
+  display: flex;
+}
+
+footer .footer-wrap .inner .footer_left ul:nth-child(3) > li {
+  margin-right: 20px;
+}
+
+footer .footer-wrap .inner .footer_info {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* footer_right */
+footer .footer-wrap .inner .footer_right {
+  width: 30%;
+}
+footer .footer-wrap .inner .footer_right div + div {
+  margin-top: 56px;
+}
+footer .footer-wrap .inner .footer_right .sns_icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer .footer-wrap .inner .footer_right .sns_icon img + img {
+  margin-left: 20px;
+}
+
+footer .footer-wrap .inner .footer_right .customer_center {
+  text-align: end;
+}
+
+footer .footer-wrap .inner .footer_right .customer_center p:nth-child(1) {
+  font-size: 20px;
+}
+
+footer .footer-wrap .inner .footer_right .customer_center p:nth-child(2) {
+  font-size: 35px;
+  font-weight: 700;
+  color: #2A3493;
+}
+
+footer .inner:nth-child(2) {
+  padding: 50px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .inner:nth-child(2) .f_b_icon01 {
+  height: 41px;
+}
+
+footer .inner:nth-child(2) .f_b_icon02 {
+  height: 26px;
+}
+footer .inner:nth-child(2) .f_b_icon03 {
+  height: 26px;
+}
+footer .inner:nth-child(2) .f_b_icon04 {
+  height: 41px;
+}
+
+
+
+
+
+
+
+/* 반응형 */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+  /* header */
+  header .inner div.sub-menu {
+    display: none;
+  }
+  header .inner nav.main-menu {
+    display: none;
+  }
+  
+  header .inner .logo {
+    position: static;
+  }
+  header .inner {
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .inner .btn-hamburger {
+    display: flex;
+
+  }
+  header .inner .btn-hamburger span.material-icons {
+    font-size: 60px;
+    color: #2A3493;
+  }
+}
+
