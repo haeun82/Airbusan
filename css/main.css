@@ -547,6 +547,19 @@ header .inner .btn-hamburger {
   align-self: flex-end;
 }
 
+.search_box .btn_search_1 {
+  width: 200px;
+  height: 50px;
+  padding: 10px 30px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #2A3493;
+  border-radius: 10px;
+  align-self: flex-end;
+}
+
 
 .search_box .btn_search::before {
   content: '* 출/도착일과 승객, 좌석등급을 모두 선택해주세요!!';
@@ -1607,6 +1620,55 @@ footer .inner:nth-child(2) .f_b_icon04 {
     Transform: translate(-50%, -50%);  
     font-weight: 700;
     color: rgb(221, 2, 2);
+  }
+
+  .search_box .inner .search_tab_reservation {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .search_box .inner .search_tab_reservation .reservation_btn {
+    flex-direction: column;
+  }
+  .search_box .inner .search_tab_reservation .reservation_btn label {
+    display: block;
+  }
+  .search_box .inner .search_tab_reservation .reservation_btn input {
+    width: 100%;
+    display: block;
+    margin: 20px 0 40px;
+  }
+  .search_box .inner .search_tab_reservation button.btn_search_1 {
+    width: 200px;
+    height: 65px;
+    font-size: 30px;
+  }
+
+  .search_box .inner .search_tab_checkIn {
+    width: 100%;
+    height: 100%;
+  }
+
+  .search_box .inner .search_tab_checkIn .checkIn_btn {
+    width: 100%;
+    flex-direction: column;
+  }
+  .search_box .inner .search_tab_checkIn .checkIn_btn label {
+    display: block;
+  }
+  .search_box .inner .search_tab_checkIn .checkIn_btn input {
+    width: 100%;
+    display: block;
+    margin: 20px 0 40px;
+  }
+  .search_box .inner .search_tab_checkIn button.btn_search_1 {
+    width: 200px;
+    height: 65px;
+    font-size: 30px;
+  }
+  .sale_box .inner .title {
+    text-align: center;
   }
 }
 
