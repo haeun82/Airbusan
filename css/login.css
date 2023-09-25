@@ -220,13 +220,127 @@ header .inner .btn-hamburger {
 
 /* login */
 .login {
-  padding-top: 100px;
+  padding-top: 130px;
+}
+
+.login .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.login .inner .login_title > h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #2A3493;
+}
+
+.login .inner .login_content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.login .inner .login_content input {
+  outline: none;
+  border: none;
+  padding: 10px;
+  background-color: #f7f7f7;
+  /* display: block; */
+  width: 300px;
+  font-size: 20px;
+  border-bottom: 2px solid transparent;
+  transition: 0.5s;
+  box-sizing: border-box;
+
+}
+
+.login .inner .login_content input:nth-child(1) {
+  margin-bottom: 10px;
+}
+
+.login .inner .login_content input.hidden:focus::placeholder {
+  color: transparent;
+  transition: color 0.5s;
+}
+
+.login .inner .login_content input.hidden:focus {
+  background-color: transparent;
+  border-bottom: 2px solid #2A3493;
+}
+
+.login .inner .login_btn > a {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2A3493;
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.login .inner .sns_login {
+  width: 300px;
+  padding-top: 20px;
+}
+
+.login .inner .sns_login .sns_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login .inner .sns_login .sns_title span:nth-child(2) {
+  margin: 0 5px;
+  font-size: 20px;
+}
+
+.login .inner .sns_login .sns_title .border_left,
+.login .inner .sns_login .sns_title .border_right {
+  display: inline-block;
+  width: 115px;
+  height: 1px;
+  background-color: #676767;
+}
+
+.login .inner .sns_login .sns_btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.login .inner .sns_login .sns_btn > a {
+  text-align: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  font-weight: 700;
+  color: #353535;
 }
 
 
+.login .inner .sns_login .sns_btn > a + a {
+  margin-top: 10px;
+}
 
+.login .inner .sns_login .sns_btn .kakao {
+  background-color: #fae100;
+  margin-top: 20px;
+}
 
+.login .inner .sns_login .sns_btn .naver {
+  background-color: #03c75a;
+}
 
+.login .inner .sns_login .sns_btn .google {
+  background-color: transparent;
+  border: 1px solid #676767;
+
+}
 
 
 
@@ -346,7 +460,7 @@ footer .inner:nth-child(2) .f_b_icon04 {
 
 
 /* 반응형 */
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
 
   /* header */
   header .inner div.sub-menu {
