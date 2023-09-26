@@ -309,13 +309,18 @@ goodsIcons.forEach(function (goodsIcon, index) {
     goodsIcons[index].classList.add('active');
 
     goodsContents.forEach(function (goodsContent) {
-      goodsContent.style.display = 'block';
+      goodsContent.style.display = 'none';
     });
-    goodsContents.addEventListener('click',function () {
-      goodsContents[index].style.display = 'none';
-      
-    });
+    goodsContents[index].style.display = 'block';
   });
+  
+    for (let index = 0; index < goodsContents.length; index++) {
+      goodsContents[index].addEventListener('click', function () {
+        goodsContents[index].style.display = 'none';
+      });
+    }
 });
+
+
 
 

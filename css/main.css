@@ -987,7 +987,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .notice .inner .notice_box {
   width: 65%;
-  height: 206px;
+  /* height: 206px; */
   display: flex;
   justify-content: space-between;
   padding: 20px;
