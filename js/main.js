@@ -262,17 +262,22 @@ const img2 = document.querySelector('.img2');
 
 let clickText = true;
 
-text2.addEventListener('click', function () {
-  // img2.style.display = 'block';
-  img1.style.opacity = 0;
-  img2.style.opacity = 1;
+text1.addEventListener('click', function () {
+  img1.style.display = 'block';
+  img2.style.display = 'none';
+  // img1.style.opacity = 1;
+  // img2.style.opacity = 0;
 });
 
-text1.addEventListener('click', function () {
-  // img1.style.display = 'block';
-  img1.style.opacity = 1;
-  img2.style.opacity = 0;
+
+text2.addEventListener('click', function () {
+  img2.style.display = 'block';
+  img1.style.display = 'none';
+  // img1.style.opacity = 0;
+  // img2.style.opacity = 1;
 });
+
+
 
 
 // 미디어쿼리 메뉴 나타내기
@@ -290,5 +295,27 @@ text1.addEventListener('click', function () {
     });
     // 'active'라는 클래스 값이 있으면 요소 보이기!(in CSS)
 
+
+
+
+// 상세설명 모달창
+// const goodsIcons = document.querySelectorAll('.goods_icon');
+// const goodsContents = document.querySelectorAll('.goods_content');
+// goodsIcons.forEach(function (goodsIcon, index) {
+//   goodsIcon.addEventListener('click', function () {
+//     goodsIcons.forEach(function (goods) {
+//       goods.classList.remove('active');
+//     });
+//     goodsIcons[index].classList.add('active');
+
+//     goodsContents.forEach(function (goodsContent) {
+//       goodsContent.style.display = 'block';
+//     });
+//     goodsContents.addEventListener('click',function () {
+//       goodsContents[index].style.display = 'none';
+      
+//     });
+//   });
+// });
 
 

@@ -591,9 +591,6 @@ footer .inner:nth-child(2) .f_b_icon04 {
     margin-left: 5px;
   }
 
-  footer .footer-wrap .inner .footer_left ul:nth-child(3) > li + li {
-    /* margin-top: 10px; */
-  }
 
   footer .footer-wrap .inner .footer_left .footer_info {
     font-size: 13px;
