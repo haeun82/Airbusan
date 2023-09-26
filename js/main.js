@@ -299,23 +299,23 @@ text2.addEventListener('click', function () {
 
 
 // 상세설명 모달창
-// const goodsIcons = document.querySelectorAll('.goods_icon');
-// const goodsContents = document.querySelectorAll('.goods_content');
-// goodsIcons.forEach(function (goodsIcon, index) {
-//   goodsIcon.addEventListener('click', function () {
-//     goodsIcons.forEach(function (goods) {
-//       goods.classList.remove('active');
-//     });
-//     goodsIcons[index].classList.add('active');
+const goodsIcons = document.querySelectorAll('.goods_icon');
+const goodsContents = document.querySelectorAll('.goods_content');
+goodsIcons.forEach(function (goodsIcon, index) {
+  goodsIcon.addEventListener('click', function () {
+    goodsIcons.forEach(function (goods) {
+      goods.classList.remove('active');
+    });
+    goodsIcons[index].classList.add('active');
 
-//     goodsContents.forEach(function (goodsContent) {
-//       goodsContent.style.display = 'block';
-//     });
-//     goodsContents.addEventListener('click',function () {
-//       goodsContents[index].style.display = 'none';
+    goodsContents.forEach(function (goodsContent) {
+      goodsContent.style.display = 'block';
+    });
+    goodsContents.addEventListener('click',function () {
+      goodsContents[index].style.display = 'none';
       
-//     });
-//   });
-// });
+    });
+  });
+});
 
 
