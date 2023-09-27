@@ -1395,7 +1395,7 @@ footer .inner:nth-child(2) .f_b_icon04 {
   border-radius: 100%;
   background-color: transparent;
   margin-right: 5px;
-  background-image: url(../images/passenger__control-sub.svg);
+  background-image: url("../images/passenger__control-sub.svg");
   cursor: pointer;
 }
 

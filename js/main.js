@@ -15,18 +15,18 @@ new Swiper('.visual .swiper', {
 const btn = document.querySelector('.select_btn button');
 const stampCheck = document.querySelector('.stamp_check');
 
-let click = '보임';
+let click = true;
 
 btn.addEventListener('click', function () {
-  if (click == '보임') {
+  if (click == true) {
     stampCheck.style.opacity = 1;  
     btn.style.backgroundColor = '#0095DA';
-    click = '숨김';
+    click = false;
 
   } else {
     stampCheck.style.opacity = 0; 
     btn.style.backgroundColor = '#717171'
-    click = '보임';      
+    click = true;      
   }
 });
 
@@ -77,69 +77,6 @@ const tabContent = document.querySelector('.search_tab_content');
 const tabReservation = document.querySelector('.search_tab_reservation');
 const tabCheckIn = document.querySelector('.search_tab_checkIn');
 
-// // 항공권 예매 탭
-// reBtn1.addEventListener('click', function () {
-//   // tabReservation.style.opacity = 0;
-//   tabContent.style.display = 'flex';
-//   tabReservation.style.display = 'none';
-//   tabCheckIn.style.display = 'none';
-
-
-//   reBtn2.style.backgroundColor = '#2A3493';
-//   reBtn22.style.color = '#fff';
-//   reBtn2.style.borderRadius = '30px 30px 0 0';
-
-//   reBtn1.style.backgroundColor = '#f8f8f8';
-//   reBtn11.style.color = '#333';
-//   reBtn1.style.borderRadius = '30px 30px 0 0';
-
-//   reBtn3.style.backgroundColor = '#2A3493';
-//   reBtn33.style.color = '#fff';
-//   reBtn3.style.borderRadius = '30px 30px 0 0';
-// });
-
-// 예약 조회 탭
-// reBtn2.addEventListener('click', function () {
-//   // tabReservation.style.opacity = 1;
-//   // tabContent.style.opacity = 0;
-//   tabReservation.style.display = 'block';
-//   tabCheckIn.style.display = 'none';
-
-
-//   reBtn1.style.backgroundColor = '#2A3493';
-//   reBtn11.style.color = '#fff';
-//   reBtn1.style.borderRadius = '30px 30px 0 0';
-
-//   reBtn2.style.backgroundColor = '#f8f8f8';
-//   reBtn22.style.color = '#333';
-//   reBtn2.style.borderRadius = '30px 30px 0 0';
-
-//   reBtn3.style.backgroundColor = '#2A3493';
-//   reBtn33.style.color = '#fff';
-//   reBtn3.style.borderRadius = '30px 30px 0 0';
-// });
-
-
-
-// // 체크인 탭
-// reBtn3.addEventListener('click', function () {
-//   // tabReservation.style.opacity = 0;
-//   tabContent.style.display = 'flex';
-//   tabReservation.style.display = 'none';
-//   tabCheckIn.style.display = 'block';
-
-//   reBtn2.style.backgroundColor = '#2A3493';
-//   reBtn22.style.color = '#fff';
-//   reBtn2.style.borderRadius = '30px 30px 0 0';
-
-//   reBtn3.style.backgroundColor = '#f8f8f8';
-//   reBtn33.style.color = '#333';
-//   reBtn3.style.borderRadius = '30px 30px 0 0';
-
-//   reBtn1.style.backgroundColor = '#2A3493';
-//   reBtn11.style.color = '#fff';
-//   reBtn1.style.borderRadius = '30px 30px 0 0';
-// });
 
 
 
@@ -148,10 +85,6 @@ const bkc01 = document.querySelector('.booking_content.bkc_01');
 const fromToDate = document.querySelector('.from_to_date');
 const closeBtn = document.querySelector('.close');
 
-
-// bck01.addEventListener('click', function () {
-//   fromToDate.style.display = 'block';
-// });
 
 bkc01.addEventListener('click', function () {
   fromToDate.style.display = 'block';
@@ -182,7 +115,6 @@ closePassenger.addEventListener('click', function () {
 
 
 // 성인
-// let adult = document.querySelector('.adult');
 const plusBtn = document.querySelector('#plus');
 const minusBtn = document.querySelector('#minus');
 const number = document.querySelector('.adult_count');
@@ -265,16 +197,12 @@ let clickText = true;
 text1.addEventListener('click', function () {
   img1.style.display = 'block';
   img2.style.display = 'none';
-  // img1.style.opacity = 1;
-  // img2.style.opacity = 0;
 });
 
 
 text2.addEventListener('click', function () {
   img2.style.display = 'block';
   img1.style.display = 'none';
-  // img1.style.opacity = 0;
-  // img2.style.opacity = 1;
 });
 
 
