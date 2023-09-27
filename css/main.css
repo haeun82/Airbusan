@@ -227,7 +227,7 @@ header .inner .btn-hamburger {
 
 /* VISUAL */
 .visual {
-  height: 690px;
+  /* height: 690px; */
   padding-top: 130px;
   display: flex;
   justify-content: center;
@@ -1351,7 +1351,7 @@ footer .inner:nth-child(2) .f_b_icon04 {
 /* passenger_modal */
 .passenger_modal {
   width: 60%;
-  height: 50%;
+  height: 30%;
   background-color: #fff;
   border: 1px solid #b1b1b1;
   margin-top: 20px;
