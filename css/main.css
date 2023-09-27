@@ -27,9 +27,9 @@ img {
   display: block;
 }
 
-/* .swiper-slide {
-  width: 36%;
-} */
+.material-icons {
+  cursor: pointer;
+}
 
 
 /* header */
@@ -1262,8 +1262,7 @@ footer .inner:nth-child(2) .f_b_icon04 {
 
 /* MODAL_ALL */
 
-
-.search_box .date_select_box {
+.search_box .from_to_date {
   width: 50%;
   height: 70%;
   background-color: #fff;
@@ -1274,17 +1273,16 @@ footer .inner:nth-child(2) .f_b_icon04 {
   left: 300px;
   z-index: 2;
   border-radius: 10px;
-  display: flex;
+  display: none;
   justify-content: space-between;
   padding: 20px;
 }
 
-.search_box .from_to_date {
-  display: none;
-}
-
 .search_box .from_to_date .date_select_box {
+  width: 100%;
+  height: 100%;
   display: flex;
+  justify-content: space-between;
 }
 
 .search_box .from_to_date .ft_date {
@@ -1316,17 +1314,12 @@ footer .inner:nth-child(2) .f_b_icon04 {
 .search_box .from_to_date > span:nth-child(2) { 
   font-size: 14px;
   position: absolute;
-  top: 545px;
-  right: 270px;
+  top: 265px;
+  left: 26px;
   z-index: 3;
 }
 
 
-
-.search_box .from_to_date span:nth-child(2) {
-  /* align-self: flex-start; */
-  /* margin-left: 110px; */
-}
 .search_box .from_to_date input {
   /* cursor: pointer; */
   outline: none;
@@ -1351,7 +1344,7 @@ footer .inner:nth-child(2) .f_b_icon04 {
 /* passenger_modal */
 .passenger_modal {
   width: 60%;
-  height: 30%;
+  height: 50%;
   background-color: #fff;
   border: 1px solid #b1b1b1;
   margin-top: 20px;
@@ -1725,6 +1718,24 @@ footer .inner:nth-child(2) .f_b_icon04 {
     font-size: 30px;
   }
 
+  /* from_to_date */
+  .search_box .from_to_date {
+    height: 30%;
+    top: 410px;
+  }
+
+  .search_box .from_to_date > span:nth-child(2) {
+    font-size: 16px;
+  }
+
+
+  /* passenger_modal */
+  .passenger_modal {
+  height: 30%;
+  }
+
+
+
   /* sale_box */
   .sale_box .inner .title {
     text-align: center;
@@ -1972,6 +1983,11 @@ footer .inner:nth-child(2) .f_b_icon04 {
     margin-bottom: 0;
   }
 
+  .search_box .from_to_date {
+    width: 70%;
+    height: 40%;
+    left: 40px;
+  }
 
   .search_box .from_to_date input#from {
     margin-right: 0;
@@ -1980,8 +1996,8 @@ footer .inner:nth-child(2) .f_b_icon04 {
   .search_box .from_to_date > span:nth-child(2) {
     font-size: 14px;
     position: absolute;
-    top: 97%;
-    right: 36%;
+    top: 84%;
+    right: 22%;
     z-index: 3;
   }
 
