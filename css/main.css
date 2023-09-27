@@ -6,7 +6,6 @@ body {
   line-height: 1.4;
   color: #333;
   /* 위 속성들은 모두 상속되기에 전체 스타일을 한번에 제어 */
-  /* overflow-x: hidden; */
 
   height: 3000px;
 }
@@ -364,13 +363,6 @@ header .inner .btn-hamburger {
   width: 28%;
 }
 
-/* .search_box .inner .search_tab_content:nth-child(3) {
-  width: 100%;
-  position: absolute;
-  top: 60px;
-} */
-
-
 .search_box .search_tab_content .select_btn > li > button:nth-child(1) {
   font-size: 16px;
   padding: 10px 20px;
@@ -587,8 +579,6 @@ header .inner .btn-hamburger {
 .search_box .inner .search_tab_reservation {
   width: 100%;
   box-sizing: border-box;
-  /* position: absolute;
-  top: 60px; */
   height: 320px;
   background-color: #f8f8f8;
   border-radius: 0 0 30px 30px;
@@ -636,8 +626,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .search_box .inner .search_tab_checkIn {
   width: 100%;
   box-sizing: border-box;
-  /* position: absolute;
-  top: 60px; */
   height: 320px;
   background-color: #f8f8f8;
   border-radius: 0 0 30px 30px;
@@ -844,7 +832,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .goods .inner .title .btn_sale_more:hover {
   background-color: #8BC53F;
-  /* border: 2px solid #8BC53F; */
   color: #fff;
 }
 
@@ -968,7 +955,6 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .travel_service .inner .service_icons li:hover img.service_icon_h {
-  /* display: block; */
   opacity: 1;
 }
 
@@ -1046,7 +1032,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .notice .inner .notice_box .notice_content > ul > li > a {
   margin-right: 30px;
-  /* border-bottom: 1px solid transparent; */
+  border-bottom: 1px solid transparent;
 
 }
 
@@ -1142,11 +1128,6 @@ input[type="number"]::-webkit-inner-spin-button {
   transform: scaleX(1); 
   transform-origin: 0% 50%;
 }
-
-/* .benefit_box .benefit_01 img:nth-child(2) {
-  position: absolute;
-  right: 7px;
-} */
 
 .benefit_box .benefit_02 {
   display: flex; 
@@ -1321,7 +1302,6 @@ footer .inner:nth-child(2) .f_b_icon04 {
 
 
 .search_box .from_to_date input {
-  /* cursor: pointer; */
   outline: none;
   padding: 5px;
   border-radius: 5px;
@@ -1332,7 +1312,6 @@ footer .inner:nth-child(2) .f_b_icon04 {
 .search_box .from_to_date label {
   display: block;
   font-weight: 700;
-  /* margin-right: 10px; */
 }
 
 
@@ -1473,8 +1452,6 @@ footer .inner:nth-child(2) .f_b_icon04 {
   width: 100%;
   height: 30px;
   border-top: 1px solid #676767;
-  /* justify-content: center;
-  align-items: center; */
   transition: background-color 0.3s;
 }
 
@@ -2064,7 +2041,7 @@ footer .inner:nth-child(2) .f_b_icon04 {
     padding-top: 50px;
   }
 
-  /* godds */
+  /* goods */
   .goods {
     padding-top: 50px;
   }
@@ -2251,10 +2228,6 @@ footer .inner:nth-child(2) .f_b_icon04 {
     width: 100%;
     flex-wrap: wrap;
     margin-left: 5px;
-  }
-
-  footer .footer-wrap .inner .footer_left ul:nth-child(3) > li + li {
-    /* margin-top: 10px; */
   }
 
   footer .footer-wrap .inner .footer_left .footer_info {
